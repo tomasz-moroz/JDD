@@ -1,5 +1,4 @@
-package pl.jjd.jjd.entity;
-
+/*package pl.jjd.jjd.entity;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -7,7 +6,7 @@ import java.util.*;
 
 @Data
 @Entity
-@Table
+@Table(name = "category")
 public class Category {
 
     @Id
@@ -19,4 +18,8 @@ public class Category {
 
     @OneToMany(mappedBy = "category", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     private List<Question> questionList = new ArrayList<>();
-}
+
+    public Category(String name) {
+        this.name = name;
+    }
+}*/
