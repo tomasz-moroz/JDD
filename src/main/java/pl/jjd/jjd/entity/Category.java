@@ -1,12 +1,22 @@
 package pl.jjd.jjd.entity;
 
+import lombok.Data;
+
+import javax.persistence.*;
 import java.util.*;
 
+@Data
+@Entity
+@Table
 public class Category {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column
     private String name;
 
-    private List<Question> questionList;
+    @OneToMany(mappedBy = "category", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
+    private List<Question> questionList = new ArrayList<>();
 }
