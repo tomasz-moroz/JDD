@@ -4,6 +4,7 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import pl.jjd.jjd.dto.QuestionDto;
 import pl.jjd.jjd.entity.Question;
+import pl.jjd.jjd.exception.NotFoundException;
 import pl.jjd.jjd.reposiotry.QuestionRepository;
 
 import java.util.*;
@@ -34,8 +35,8 @@ public class QuestionService {
         return new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory());
     }
 
-    public void delete(Long id) throws ChangeSetPersister.NotFoundException {
-        Question entity = questionRepository.findById(id).orElseThrow(ChangeSetPersister.NotFoundException::new);
+    public void delete(Long id) {
+        Question entity = questionRepository.findById(id).orElseThrow(NotFoundException::new);
         questionRepository.delete(entity);
     }
 

@@ -40,7 +40,7 @@ public class QuestionController {
     }
     @DeleteMapping(path = "/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable Long id) throws ChangeSetPersister.NotFoundException {
+    public void delete(@PathVariable Long id) {
         questionService.delete(id);
     }
 
