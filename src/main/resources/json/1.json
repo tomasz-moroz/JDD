@@ -1,0 +1,170 @@
+[
+  {
+    "id": 7,
+    "question": "Co to jest immutable dla Stringa",
+    "answer": "Nie mozna edytowac Stringa na tym samym miejscu w pamieci, zostanie stworzone nowe jezeli JVM nie znajdzie poprzez String Pool takiego samego stringa. Jezeli znajdzie przypisuje naszego Stringa do Stringa ktory juz istnial, zeby nie tworzyc zbednych kopii tego samego.",
+    "category": "Java SE"
+  },
+  {
+    "id": 8,
+    "question": "Jakie sa trzy rodzaje polimorfizmu w Javie",
+    "answer": "Dziedziczenie, Overiding, Overloading",
+    "category": "Java SE"
+  },
+  {
+    "id": 9,
+    "question": "Co to jest metoda statyczna?",
+    "answer": "Do uruchomienia takiej metody nie potrzebujemy tworzyć obiektu. Wystarczy odwołać się bezpośrednio do klasy",
+    "category": "Java SE"
+  },
+  {
+    "id": 10,
+    "question": "Czy metoda statyczna moze korzystac z niestatycznych zmiennych?",
+    "answer": "Nie moze.",
+    "category": "Java SE"
+  },
+  {
+    "id": 11,
+    "question": "Jakie znasz rodzaje petli w Javie?",
+    "answer": "for, for each, while, do",
+    "category": "Java SE"
+  },
+  {
+    "id": 12,
+    "question": "Jakie wystepuja skladnie wyrazenia warunkowego?",
+    "answer": "lub ||, i &&, wiekszy >, mniejszy<, wiekszy rowny >=, mniejszy rowny <=",
+    "category": "Java SE"
+  },
+  {
+    "id": 13,
+    "question": "Do czego sluzy switch?",
+    "answer": "Switch jest kolejną instrukcją warunkową, jaką mamy do dyspozycji Javie. Używamy tej instrukcji jeśli chcemy porównać zmienną warunkową ze zdefiniowanymi wartościami i na podstawie takiego porównania wykonać określony blok kodu.",
+    "category": "Java SE"
+  },
+  {
+    "id": 16,
+    "question": "ak zaimplementowac metode ktora sprawdza czy wszystkie znaki sa unikatowe?",
+    "answer": "Do setu trzeba wrzucic char array I porownac z char arreyem wrzuconym do arreya I porownac dlugosci. Set przechowuje tylko unikatowe wartosci wiec jezeli jakis znak sie powtarza set bedzie krotrzy niz array. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 17,
+    "question": "Jakie sa implementacje listy? Jaka jest roznica?",
+    "answer": "Linked list – kazdy element wie o poprzednim I o nastepnym, sa top elementy typu node. Array list – bazuje na tablicy",
+    "category": "Java SE"
+  },
+  {
+    "id": 18,
+    "question": "Java Enterprise Edition, Jakie sa elementy w Javie EE?",
+    "answer": "CDI (Context and dependency injection) - wstrzykiwanie zależności, JPA (Java Persistence API) - mapowanie obiektowo relacyjne, EJB (Enterprise Java Beans) - warstwa usług ze wsparciem dla zarządzania transakcjami, JaxRS - specyfikacja dedykowana do tworzenia aplikacji REST, JSF (Java ServerFaces) - framework MVC integrujący się z innymi elementami JEE  ",
+    "category": "Java EE"
+  },
+  {
+    "id": 19,
+    "question": "Czym jest dependecy injection? ",
+    "answer": "Dependency Injection – w skrócie DI, to wzorzec projektowy polegający na tym, że obiekt nie inicjalizuje swoich zależności sam, tylko przyjmuje je z zewnątrz poprzez tzw. „wstrzykiwanie”. Główną zaletą takiego podejścia jest między innymi łatwiejsze pisanie testów jednostkowych. Użycie DI może również sprawi, że nasze obiekty będą ze sobą luźniej powiązane (ang. loose coupling).",
+    "category": "Java EE"
+  },
+  {
+    "id": 20,
+    "question": "Co to jest EJB?",
+    "answer": "technologia działająca po stronie serwera, która jest jednym z elementów specyfikacji JEE. EJB jest podobny do podzbioru możliwości JEE w kontekście zarządzania ziarnami (ang. beans), udostępniającymi usługi takie jak transakcyjność, trwałość, rozproszenie, bezpieczeństwo, wielodostęp itp. Jedyną rzeczą wymaganą od programisty korzystającego ze specyfikacji EJB jest dostosowanie się do pewnego interfejsu EJB (wymogów implementacyjnych), którego zastosowanie zwalnia użytkownika EJB (dostawcy ziarna lub całego modułu ziaren EJB) z konieczności opracowywania własnych metod obsługi komponentów.",
+    "category": "Java EE"
+  },
+  {
+    "id": 22,
+    "question": "Jak zrobic zeby w przypadku 3 opcji zrobic zawsze to samo?",
+    "answer": "W przypadku wielu opcji ktore maja zrobic to samo wymieniamy te case’y po kolei ale zamiast przecinka stawiamy dwukropek",
+    "category": "Java SE"
+  },
+  {
+    "id": 23,
+    "question": "Jak nazywa sie wordkey do wykonania czegos do czego nie pasuje zaden case?",
+    "answer": "default",
+    "category": "Java SE"
+  },
+  {
+    "id": 24,
+    "question": "Jakie sa rodzaje beanow w javie ee?",
+    "answer": "sesyjne EJB (ang. session EJB) bezstanowe i stanowe, sterowane komunikatami EJB (ang. message-driven EJB), encyjne EJB (ang. entity EJB)",
+    "category": "Java EE"
+  },
+  {
+    "id": 25,
+    "question": "Rodzaje scope'ow w Springu",
+    "answer": "@Scope(\"singleton\"), prototype, request, session, application, websocket",
+    "category": "Spring"
+  },
+  {
+    "id": 26,
+    "question": "Jakie znasz relacje pomiedzy encjami?",
+    "answer": "Sa trzy rodzaje relacji:  OneToOne, OneToMany, ManyToMany",
+    "category": "Hibernate"
+  },
+  {
+    "id": 27,
+    "question": "Jak sa realizowane relacje ManyToMany, wiele do wielu?",
+    "answer": "Tworzy sie nowa trabela – tabele posrednia ktora bedzie zawierala pary ID",
+    "category": "Hibernate"
+  },
+  {
+    "id": 28,
+    "question": "Co to jest LAZY loading oraz EAGER loading?",
+    "answer": "LAZY pobiera tylko te pola z encji ktore chcemy, a EAGER pobiera wszzystie pola z encji ktore sa w relacji. ",
+    "category": "Hibernate"
+  },
+  {
+    "id": 29,
+    "question": "Co to jest transakcja?",
+    "answer": "Jest to wiele operacji ktore musza wykonac sie w okreslonej kolejnosci lub zadna. Jezeli cos sie popsuje w trakcje trwania transakcji musi pojsc rollback, a jezeli wszystko sie wykona idzie commit czyli wyslanie transakcji oraz zapisanie wszystkiego co sie dzialo podczas transakcji.",
+    "category": "Java EE"
+  },
+  {
+    "id": 30,
+    "question": "Jak zobaczyc liste 3 ostatnich commitow?",
+    "answer": "Git log -3",
+    "category": "Git"
+  },
+  {
+    "id": 31,
+    "question": "W czym pomaga IDE?",
+    "answer": "-Debugger -Sonar -Pluginy -Poprawnosc kodu",
+    "category": "Java EE"
+  },
+  {
+    "id": 32,
+    "question": "Jaka jest roznica pomidzy JDK I JRE?",
+    "answer": "JRE – Java Runtime Enviroment – ma wszystkie rzeczy niezbedne do uruchomienia aplikacji w Javie  JDK -- Zawiera JRE plus wszystkie niezbedne narzedzia do napisania programum, czyli wbudowane klasy, komplator, calyu kod Javy",
+    "category": "Java SE"
+  },
+  {
+    "id": 33,
+    "question": "Jakie znasz komenty Linuxowe?",
+    "answer": "cat nazwa_pliku – czytanie zawartości pliku, rm nazwa_pliku – usuwa plik,  rmdir nazwa_katalogu – usuwa katalog, mkdir nazwa_katalogu – tworzy katalog, man costam – info o danym poleceniu",
+    "category": "Linux"
+  },
+  {
+    "id": 34,
+    "question": "Do czego sluzy Maven?",
+    "answer": "Maven (ang. “spec”) to narzędzie do budowania projektów napisanych w Javie. Sam Maven także został napisany w tym języku. Maven pozwala w uporządkowany sposób zarządzać zagadnieniami takimi jak: kompilacja, testowanie, budowanie, wynajdowanie i pobieranie zależności, generowanie dokumentacji.",
+    "category": "Maven"
+  },
+  {
+    "id": 35,
+    "question": "Jaki jest sklad zespolu Scrumowego?",
+    "answer": "W skład Zespołu Scrumowego wchodzą: Właściciel Produktu (ang. Product Owner), Zespół Deweloperski (ang. Development Team) oraz Scrum Master. ",
+    "category": "Scrum"
+  },
+  {
+    "id": 36,
+    "question": "Czym jest Daily Standup?",
+    "answer": "Jest to max 15min spotkanie ktorego celem jest: uspójnienie wiedzy, zaplanowanie dalszej pracy, znalezienie potencjalnych problemów",
+    "category": "Scrum"
+  },
+  {
+    "id": 37,
+    "question": "Ile trwa I z czego sklada sie sprint?",
+    "answer": "Sprinty składają się z Planowania Sprintu, Codziennych Scrumów, pracy wytwórczej, Przeglądu Sprintu oraz Retrospektywy Sprintu",
+    "category": "Scrum"
+  }
+]
