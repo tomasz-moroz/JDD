@@ -13,6 +13,7 @@
 
     <label for="category">Kategoria</label>
     <select type="text" name="category" required style="margin-left: auto; margin-right: auto">
+        <option selected value=null></option>
         <option value="Java SE">Java SE</option>
         <option value="Java EE">Java EE</option>
         <option value="Spring">Spring</option>
@@ -29,6 +30,6 @@
 
     <input type="submit" name="save" value="save">
 </form>
-
+<a href="/start">Powrot</a>
 </body>
 </html>

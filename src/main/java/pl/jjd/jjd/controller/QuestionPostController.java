@@ -27,9 +27,6 @@ public class QuestionPostController {
         questionService.saveQuestion(questionDto);
         return "questionPost";
     }
-    @GetMapping(path = "/template/form")
-    public String questionPost(){
-        return "questionPost";
-    }
+
 
 }
