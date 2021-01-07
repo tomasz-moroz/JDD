@@ -10,7 +10,7 @@ import java.util.*;
 
 
 @SpringBootApplication
-public class JjdApplication implements CommandLineRunner {
+public class JjdApplication  {
 
 
     private JsonReader jsonReader;
@@ -23,13 +23,4 @@ public class JjdApplication implements CommandLineRunner {
         SpringApplication.run(JjdApplication.class, args);
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-        try {
-            jsonReader.exportJson();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-    }
 }

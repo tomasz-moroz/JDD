@@ -2,9 +2,12 @@ package pl.jjd.jjd.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import pl.jjd.jjd.dto.QuestionDto;
 import pl.jjd.jjd.service.QuestionService;
 
+import javax.transaction.Transactional;
+import java.io.IOException;
 import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.util.*;
@@ -18,15 +21,11 @@ public class JsonReader {
         this.questionService = questionService;
     }
 
-    public void exportJson(){
-        try {
+    public List<QuestionDto> exportJson() throws IOException {
         List<QuestionDto> questionDtoList = questionService.findAll();
         ObjectMapper objectMapper = new ObjectMapper();
-
         objectMapper.writeValue(Paths.get("src/main/resources/json/backup "+nameFileBuilder()+".json").toFile(), questionDtoList);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        return questionDtoList;
     }
 
     public String nameFileBuilder() {

@@ -6,14 +6,8 @@
 </head>
 <body>
 <p>readJson</p>
-<form action="Json-upload" method="post" enctype="multipart/form-data">
-    <div style="display: flex; flex-direction: row;">
-        <input style="margin: auto; display: block; float: none;" class="btn btn-solid" type="file"
-               name="drinks">
-        <button style="margin: auto; display: block; float: none;" class="btn btn-solid" type="submit"
-                class="">Upload
-        </button>
-    </div>
+<form action="/template/read" method="get">
+    <input type="submit" name="readJson" value="read">
 </form>
 <a href="/start">Powrot</a>
 </body>

@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.jjd.jjd.utils.JsonReader;
 
+import java.io.IOException;
+
 
 @Controller
 public class ExportJsonController {
@@ -18,13 +20,11 @@ public class ExportJsonController {
     }
 
     @GetMapping(path = "/template/export")
-    public String export(Model model){
-        try {
+    public String export(Model model) throws IOException {
 
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+        model.addAttribute("save", jsonReader.exportJson());
+        jsonReader.exportJson();
+
         return "exportJson";
     }
 }

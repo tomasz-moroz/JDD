@@ -51,4 +51,7 @@ public class QuestionService {
         return new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory());
     }
 
+    public Iterable<Question> saveQuestionList(List<Question> questionList) {
+        return questionRepository.saveAll(questionList);
+    }
 }

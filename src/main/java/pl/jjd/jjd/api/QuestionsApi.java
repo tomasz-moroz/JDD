@@ -80,4 +80,14 @@ public class QuestionsApi {
         this.additionalProperties.put(name, value);
     }
 
+    @Override
+    public String toString() {
+        return "QuestionsApi{" +
+                "id=" + id +
+                ", question='" + question + '\'' +
+                ", answer='" + answer + '\'' +
+                ", category='" + category + '\'' +
+                ", additionalProperties=" + additionalProperties +
+                '}';
+    }
 }
