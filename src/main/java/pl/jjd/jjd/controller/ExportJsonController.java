@@ -3,8 +3,7 @@ package pl.jjd.jjd.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import pl.jjd.jjd.utils.JsonReader;
+import pl.jjd.jjd.service.JsonReaderService;
 
 import java.io.IOException;
 
@@ -13,9 +12,9 @@ import java.io.IOException;
 public class ExportJsonController {
 
 
-    private JsonReader jsonReader;
+    private JsonReaderService jsonReader;
 
-    public ExportJsonController(JsonReader jsonReader) {
+    public ExportJsonController(JsonReaderService jsonReader) {
         this.jsonReader = jsonReader;
     }
 

@@ -1,23 +1,21 @@
-package pl.jjd.jjd.utils;
+package pl.jjd.jjd.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pl.jjd.jjd.dto.QuestionDto;
-import pl.jjd.jjd.service.QuestionService;
 
-import javax.transaction.Transactional;
+
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.util.*;
 
-@Component
-public class JsonReader {
+@Service
+public class JsonReaderService {
 
     QuestionService questionService;
 
-    public JsonReader(QuestionService questionService) {
+    public JsonReaderService(QuestionService questionService) {
         this.questionService = questionService;
     }
 
