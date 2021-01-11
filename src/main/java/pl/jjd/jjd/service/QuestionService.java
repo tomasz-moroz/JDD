@@ -54,4 +54,11 @@ public class QuestionService {
     public Iterable<Question> saveQuestionList(List<Question> questionList) {
         return questionRepository.saveAll(questionList);
     }
+    public QuestionDto findRandomQuestion() {
+        List<Question> questionList = (List<Question>) questionRepository.findAll();
+        List<QuestionDto>questionDtoList = questionList.stream().map(entity -> new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory())).collect(Collectors.toList());
+        Random random = new Random();
+        QuestionDto randomQuestion = questionDtoList.get(random.nextInt(questionList .size()));
+        return randomQuestion;
+    }
 }

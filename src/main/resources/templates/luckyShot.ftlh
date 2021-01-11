@@ -1,22 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<p>luckyShot</p>
-<label> Draw a question: <input type="submit" name="luckyShot" value="shot"></label>
-<p> Question:
-    <#if question??>
-    ${question} </p>
-<#else >
-    Question not found</#if>
-<p> Category:
-    <#if category??>
-    ${category} </p>
-<#else >
-    Category not found</#if>
-<a href="/start">Powrot</a>
+
+<div class="accordion">
+    <h2>Kategoria:<p><#if category??>
+            ${category} </p>
+        <#else >
+        Category not found</#if></p> </h2>
+    <div id="one" class="section">
+        <h3>
+            <a href="#one">Pytanie: </a>
+        </h3>
+        <div>
+            <p><#if question??>
+                ${question} </p>
+            <#else >
+            Question not found</#if></p>
+        </div>
+    </div>
+    <div id="two" class="section">
+        <h3>
+            <a href="#two">Odpowiedz: </a>
+        </h3>
+        <div>
+            <p><#if answer??>
+                ${answer} </p>
+            <#else >
+            Answer not found</#if></p>
+        </div>
+    </div>
+</div>
+
+<form action="/template/randomQuestion" method="get">
+    <input type="submit" name="save" value="Losuj kolejne">
+</form>
+<a href="/start">Powrot do strony glownej</a>
 </body>
 </html>
