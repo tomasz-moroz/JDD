@@ -1,0 +1,308 @@
+[
+  {
+    "id": 7,
+    "question": "Co to jest immutable dla Stringa",
+    "answer": "Nie mozna edytowac Stringa na tym samym miejscu w pamieci, zostanie stworzone nowe jezeli JVM nie znajdzie poprzez String Pool takiego samego stringa. Jezeli znajdzie przypisuje naszego Stringa do Stringa ktory juz istnial, zeby nie tworzyc zbednych kopii tego samego.",
+    "category": "Java SE"
+  },
+  {
+    "id": 8,
+    "question": "Jakie sa trzy rodzaje polimorfizmu w Javie",
+    "answer": "Dziedziczenie, Overiding, Overloading",
+    "category": "Java SE"
+  },
+  {
+    "id": 9,
+    "question": "Co to jest metoda statyczna?",
+    "answer": "Do uruchomienia takiej metody nie potrzebujemy tworzyć obiektu. Wystarczy odwołać się bezpośrednio do klasy",
+    "category": "Java SE"
+  },
+  {
+    "id": 10,
+    "question": "Czy metoda statyczna moze korzystac z niestatycznych zmiennych?",
+    "answer": "Nie moze.",
+    "category": "Java SE"
+  },
+  {
+    "id": 11,
+    "question": "Jakie znasz rodzaje petli w Javie?",
+    "answer": "for, for each, while, do",
+    "category": "Java SE"
+  },
+  {
+    "id": 12,
+    "question": "Jakie wystepuja skladnie wyrazenia warunkowego?",
+    "answer": "lub ||, i &&, wiekszy >, mniejszy<, wiekszy rowny >=, mniejszy rowny <=",
+    "category": "Java SE"
+  },
+  {
+    "id": 13,
+    "question": "Do czego sluzy switch?",
+    "answer": "Switch jest kolejną instrukcją warunkową, jaką mamy do dyspozycji Javie. Używamy tej instrukcji jeśli chcemy porównać zmienną warunkową ze zdefiniowanymi wartościami i na podstawie takiego porównania wykonać określony blok kodu.",
+    "category": "Java SE"
+  },
+  {
+    "id": 16,
+    "question": "ak zaimplementowac metode ktora sprawdza czy wszystkie znaki sa unikatowe?",
+    "answer": "Do setu trzeba wrzucic char array I porownac z char arreyem wrzuconym do arreya I porownac dlugosci. Set przechowuje tylko unikatowe wartosci wiec jezeli jakis znak sie powtarza set bedzie krotrzy niz array. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 17,
+    "question": "Jakie sa implementacje listy? Jaka jest roznica?",
+    "answer": "Linked list – kazdy element wie o poprzednim I o nastepnym, sa top elementy typu node. Array list – bazuje na tablicy",
+    "category": "Java SE"
+  },
+  {
+    "id": 18,
+    "question": "Java Enterprise Edition, Jakie sa elementy w Javie EE?",
+    "answer": "CDI (Context and dependency injection) - wstrzykiwanie zależności, JPA (Java Persistence API) - mapowanie obiektowo relacyjne, EJB (Enterprise Java Beans) - warstwa usług ze wsparciem dla zarządzania transakcjami, JaxRS - specyfikacja dedykowana do tworzenia aplikacji REST, JSF (Java ServerFaces) - framework MVC integrujący się z innymi elementami JEE  ",
+    "category": "Java EE"
+  },
+  {
+    "id": 19,
+    "question": "Czym jest dependecy injection? ",
+    "answer": "Dependency Injection – w skrócie DI, to wzorzec projektowy polegający na tym, że obiekt nie inicjalizuje swoich zależności sam, tylko przyjmuje je z zewnątrz poprzez tzw. „wstrzykiwanie”. Główną zaletą takiego podejścia jest między innymi łatwiejsze pisanie testów jednostkowych. Użycie DI może również sprawi, że nasze obiekty będą ze sobą luźniej powiązane (ang. loose coupling).",
+    "category": "Java EE"
+  },
+  {
+    "id": 20,
+    "question": "Co to jest EJB?",
+    "answer": "technologia działająca po stronie serwera, która jest jednym z elementów specyfikacji JEE. EJB jest podobny do podzbioru możliwości JEE w kontekście zarządzania ziarnami (ang. beans), udostępniającymi usługi takie jak transakcyjność, trwałość, rozproszenie, bezpieczeństwo, wielodostęp itp. Jedyną rzeczą wymaganą od programisty korzystającego ze specyfikacji EJB jest dostosowanie się do pewnego interfejsu EJB (wymogów implementacyjnych), którego zastosowanie zwalnia użytkownika EJB (dostawcy ziarna lub całego modułu ziaren EJB) z konieczności opracowywania własnych metod obsługi komponentów.",
+    "category": "Java EE"
+  },
+  {
+    "id": 22,
+    "question": "Jak zrobic zeby w przypadku 3 opcji zrobic zawsze to samo?",
+    "answer": "W przypadku wielu opcji ktore maja zrobic to samo wymieniamy te case’y po kolei ale zamiast przecinka stawiamy dwukropek",
+    "category": "Java SE"
+  },
+  {
+    "id": 23,
+    "question": "Jak nazywa sie wordkey do wykonania czegos do czego nie pasuje zaden case?",
+    "answer": "default",
+    "category": "Java SE"
+  },
+  {
+    "id": 24,
+    "question": "Jakie sa rodzaje beanow w javie ee?",
+    "answer": "sesyjne EJB (ang. session EJB) bezstanowe i stanowe, sterowane komunikatami EJB (ang. message-driven EJB), encyjne EJB (ang. entity EJB)",
+    "category": "Java EE"
+  },
+  {
+    "id": 25,
+    "question": "Rodzaje scope'ow w Springu",
+    "answer": "@Scope(\"singleton\"), prototype, request, session, application, websocket",
+    "category": "Spring"
+  },
+  {
+    "id": 26,
+    "question": "Jakie znasz relacje pomiedzy encjami?",
+    "answer": "Sa trzy rodzaje relacji:  OneToOne, OneToMany, ManyToMany",
+    "category": "Hibernate"
+  },
+  {
+    "id": 27,
+    "question": "Jak sa realizowane relacje ManyToMany, wiele do wielu?",
+    "answer": "Tworzy sie nowa trabela – tabele posrednia ktora bedzie zawierala pary ID",
+    "category": "Hibernate"
+  },
+  {
+    "id": 28,
+    "question": "Co to jest LAZY loading oraz EAGER loading?",
+    "answer": "LAZY pobiera tylko te pola z encji ktore chcemy, a EAGER pobiera wszzystie pola z encji ktore sa w relacji. ",
+    "category": "Hibernate"
+  },
+  {
+    "id": 29,
+    "question": "Co to jest transakcja?",
+    "answer": "Jest to wiele operacji ktore musza wykonac sie w okreslonej kolejnosci lub zadna. Jezeli cos sie popsuje w trakcje trwania transakcji musi pojsc rollback, a jezeli wszystko sie wykona idzie commit czyli wyslanie transakcji oraz zapisanie wszystkiego co sie dzialo podczas transakcji.",
+    "category": "Java EE"
+  },
+  {
+    "id": 30,
+    "question": "Jak zobaczyc liste 3 ostatnich commitow?",
+    "answer": "Git log -3",
+    "category": "Git"
+  },
+  {
+    "id": 31,
+    "question": "W czym pomaga IDE?",
+    "answer": "-Debugger -Sonar -Pluginy -Poprawnosc kodu",
+    "category": "Java EE"
+  },
+  {
+    "id": 32,
+    "question": "Jaka jest roznica pomidzy JDK I JRE?",
+    "answer": "JRE – Java Runtime Enviroment – ma wszystkie rzeczy niezbedne do uruchomienia aplikacji w Javie  JDK -- Zawiera JRE plus wszystkie niezbedne narzedzia do napisania programum, czyli wbudowane klasy, komplator, calyu kod Javy",
+    "category": "Java SE"
+  },
+  {
+    "id": 33,
+    "question": "Jakie znasz komenty Linuxowe?",
+    "answer": "cat nazwa_pliku – czytanie zawartości pliku, rm nazwa_pliku – usuwa plik,  rmdir nazwa_katalogu – usuwa katalog, mkdir nazwa_katalogu – tworzy katalog, man costam – info o danym poleceniu",
+    "category": "Linux"
+  },
+  {
+    "id": 34,
+    "question": "Do czego sluzy Maven?",
+    "answer": "Maven (ang. “spec”) to narzędzie do budowania projektów napisanych w Javie. Sam Maven także został napisany w tym języku. Maven pozwala w uporządkowany sposób zarządzać zagadnieniami takimi jak: kompilacja, testowanie, budowanie, wynajdowanie i pobieranie zależności, generowanie dokumentacji.",
+    "category": "Maven"
+  },
+  {
+    "id": 35,
+    "question": "Jaki jest sklad zespolu Scrumowego?",
+    "answer": "W skład Zespołu Scrumowego wchodzą: Właściciel Produktu (ang. Product Owner), Zespół Deweloperski (ang. Development Team) oraz Scrum Master. ",
+    "category": "Scrum"
+  },
+  {
+    "id": 36,
+    "question": "Czym jest Daily Standup?",
+    "answer": "Jest to max 15min spotkanie ktorego celem jest: uspójnienie wiedzy, zaplanowanie dalszej pracy, znalezienie potencjalnych problemów",
+    "category": "Scrum"
+  },
+  {
+    "id": 37,
+    "question": "Ile trwa I z czego sklada sie sprint?",
+    "answer": "Sprinty składają się z Planowania Sprintu, Codziennych Scrumów, pracy wytwórczej, Przeglądu Sprintu oraz Retrospektywy Sprintu",
+    "category": "Scrum"
+  },
+  {
+    "id": 38,
+    "question": null,
+    "answer": null,
+    "category": null
+  },
+  {
+    "id": 39,
+    "question": null,
+    "answer": null,
+    "category": null
+  },
+  {
+    "id": 40,
+    "question": "Klasa abstrakcyjna vs interface",
+    "answer": "- interfejs opiera się na funkcjonalności, a klasa na implementacji, - klasa może implementować wiele interfejsów, ale rozszerzać jednego rodzica, -wszystkie zadeklarowane metody w interfejsie są publiczne, natomiast metody zadeklarowane w klasach mogą być publiczne lub chronione, -Interfejs może zawierać jedynie deklaracje metod, a klasa abstrakcyjna może zawierać również metody zdefiniowane, -zarówno w interfejsach, jak i klasach można definiować stałe, a wynika to z faktu, że stałe są niezależne od konkretnej instancji, -Klasy abstrakcyjne mogą zawierać atrybuty, natomiast interfejsy - nie. Powód jest ten sam, jak przy deklaracjach i definicjach metod   ",
+    "category": "Java SE"
+  },
+  {
+    "id": 41,
+    "question": "Klasa abstrakcyjna",
+    "answer": "-Jest to klasa, z której nie można utworzyć obiektu (w tradycyjny sposób), można po niej jedynie dziedziczyć, -Klasa taka może mieć metody, które posiadają implementację, ale także metody abstrakcyjne czyli takie, które są jedynie deklaracją metody, która powinna zostać zaimplementowana w klasie potomnej, -W Javie jest ograniczenie dziedziczenia do jednej klasy, więc każda klasa potomna może dziedziczyć tylko raz, -Klasa abstrakcyjna, podobnie jak normalna klasa, może przechowywać stan (może mieć pola), który może być dowolnie modyfikowany, -Każda podklasa może nadpisywać zachowania, czyli nadpisywać publiczne i chronione (public i protected)  metody odziedziczone z klasy bazowej",
+    "category": "Java SE"
+  },
+  {
+    "id": 42,
+    "question": "Interfejs w Javie",
+    "answer": "-mogą zawierać jedynie stałe i deklaracje metod, -Od Javy 8 mogą zawierać także metody default i metody statyczne (które mogą zawierać implementację). A od Javy 9 też metody prywatne, -Interfejsy nie mogą mieć stanu, -Służą one do definiowania zachowania dla obiektów. Ale inaczej niż w przypadku klasy abstrakcyjnej nie definiują tego zachowania (metody nie mają implementacji). Każda klasa implementująca interfejs musi mieć implementację metod zawartych w interfejsie, klasy mogą implementować wiele interfejsów, -Metody default i statyczne zostały wprowadzone w Javie 8 w celu poprawienia kompatybilności wstecznej. Wprowadzenie ich pozwala zmieniać interfejsy, które zostały już zaimplementowane przez różne klasy, ale nie wymusza automatycznie zmian implementacji tych klas.",
+    "category": "Java SE"
+  },
+  {
+    "id": 43,
+    "question": "Lazy vs Eager",
+    "answer": "Gdy mamy relacje np. Uczelnia i studenci przy ladowaniu Eager zaladuje nam liste studentow ze wszystkimi polami, natomiast przy Lazy, musimy zarzadac getStudents() zeby wyswietlilo nam te pola. Jednym slowem nie potrzebujemy zazwyczaj calej zawartosi bazy danych, po to sa te oznaczenia",
+    "category": "Hibernate"
+  },
+  {
+    "id": 44,
+    "question": "CDI, EJB - krotko opisac co to, zasada dzialania.",
+    "answer": "Przewagą EJB nad CDI będzie fakt, że kontener przejmie kontrolę nad transakcjami, bezpieczeństwem, współbieżnością, pulami obiektów, -@EJB pozwala na wstrzykiwanie tylko i wyłącznie obiektów zarządzanych przez kontener EJB, -@Inject obsługiwana jest przez kontener CDI i pozwala na wstrzykiwanie zarówno obiektów zarządzanych przez kontener EJB jak i pozostałych beanów.",
+    "category": "Java EE"
+  },
+  {
+    "id": 45,
+    "question": "Co to \"widok\"  w SQL?",
+    "answer": "Widok (ang View) to tak naprawdę zwykła tabela „wirtualna”, którą tworzymy za pośrednictwem normalnego zapytania. Z widoku korzystamy jak ze zwykłej tabeli, możemy więc wykonywać „na nim” dowolne kwerendy. Jest jednak pewna różnica w stosunku do dotychczas używanych tabel. Mianowicie widoki do póki nie zostanie utworzony dla nich indeks nie mają fizycznej reprezentacji swoich danych. Na podstawie jednego widoku mozemy tworzyc kolejne (czyli kolejne tabele) z odpowiednimi zaproponawanymi przez nas ograniczeniami.",
+    "category": "SQL"
+  },
+  {
+    "id": 46,
+    "question": "Co to LinkedList, zasada dzialania, na czym zbudowana (co pod spodem)?",
+    "answer": "LinkedList - implementacja wiązana, to lista dwukierunkowa czyli każdy element przechowuje odniesienie do poprzedniego i kolejnego elementu listy. Gdy zamierzamy czesto dodawac cos i usuwa z listy lepsza bedzie LinkedList, bo jest szybsza.",
+    "category": "Java SE"
+  },
+  {
+    "id": 47,
+    "question": "Co to ArrayList, zasada dzialania, na czym zbudowana (co pod spodem)?",
+    "answer": "ArrayList – jest to podstawowa implementacja listy w Javie. Można też ją określić jako samo-rozszerzalną tablicę, ponieważ jej implementacja bazuje na tablicy, która jest powiększana wraz ze wzrostem rozmiaru listy. Dzięki temu, jest to najwydajniejsza implementacja listy w Javie (w bibliotece standardowej).",
+    "category": "Java SE"
+  },
+  {
+    "id": 48,
+    "question": "Co znaczy obiekt \"immutable\"?",
+    "answer": "Niezmienialny obiekt to taki, który raz zainicjalizowany nie zmieni swojego stanu. O co dokładnie chodzi? Mamy gwarancję, że wszystkie dane (pola) w konkretnym obiekcie nie ulegną zmianie. Żeby zmodyfikować jakieś wartości, trzeba utworzyć całkowicie nowy obiekt.",
+    "category": "Java SE"
+  },
+  {
+    "id": 49,
+    "question": "Czym jest Java EE?",
+    "answer": "JavaEE (Java for Enterprise Edition) jest platformą do tworzenia aplikacji biznesowych agregującą zestaw specyfikacji dla języka Java, które w założeniu mają upraszczać rozwiązywanie złożonych i powtarzalnych problemów związanych z wytwarzaniem oprogramowania. -serwerowa platforma programistyczna, -definiuje standard oparty na wielowarstwowej architekturze komponentowej,  -określa zbiór interfejsów jakich implementację musi dostarczać zgodny serwer aplikacyjny, -specyfikacja zestawu API dla Javy ma na celu usprawnić wytwarzanie komercyjnego oprogramowania",
+    "category": "Java EE"
+  },
+  {
+    "id": 50,
+    "question": "Co to Transactional (+Commmit i Rollback w transakcjach)?",
+    "answer": "Transakcja to zbiór operacji (u nas - instrukcji języka SQL), które mogą być wykonane jedynie wszystkie lub żadna.  Nazwa takiego ciągu instrukcji pochodzi od operacji bankowych - przelew musi jednocześnie zabrać z jednego konta i dodać na drugie. W przypadku niepowodzenia żadna z tych operacji nie powinna mieć miejsca. Jeśli zajdzie tylko jedna skutki mogłyby być katastrofalne. COMMIT – zatwierdzenie zmian wykonanych w obrębie transakcji,  ROLLBACK – odrzucenie zmian wykonanych w obrębie transakcji",
+    "category": "SQL"
+  },
+  {
+    "id": 51,
+    "question": "Nowosci w Java 8",
+    "answer": "Zmiany w interfejsach Od wersji Javy 8, istnieje możliwość nie tylko deklaracji metod, ale i również ich definicji (metody domyślne) w interfejsach. Takie rozwiązanie umożliwia tworzenie metod, które nie muszą być definiowane w klasach implementujących dany interfejs, -Wyrażenia lambda Wyrażenia lambda to funkcje anonimowe, czyli takie, które nie posiadają nazwy. -Strumienie są wygodną konstrukcją języka Java 8, która pozwala na wykonywanie operacji na elementach kolekcji (potok) bez konieczności magazynowania tych danych, -Nashorn to mechanizm, który umożliwia współpracę języka JavaScript oraz języka Java, -Zmiany w adnotacjach Specyfikacja pozwala wykorzystać adnotacje nie tylko do dekorowania metod, pól, bądź konstruktorów czy klas, ale także umożliwia dekorowanie dowolnego użytego w kodzie typu.",
+    "category": "Java SE"
+  },
+  {
+    "id": 52,
+    "question": "Role w Scrum",
+    "answer": "Product Owner (Właściciel produktu) – pełni rolę reprezentanta klienta, -Scrum Master – to swoisty przywódca duchowy zespołu i osoba odpowiedzialna za rozumienie teorii Scruma przez zespół oraz przestrzeganie przyjętych zasad, -Zespół Deweloperski – zespół składa się ze specjalistów w swojej branży posiadających wszystkie niezbędne kompetencje, by z powodzeniem realizować powierzone im zadania.",
+    "category": "Scrum"
+  },
+  {
+    "id": 53,
+    "question": "Jakie sa kolekcje w Javie? Wymienic podzial.",
+    "answer": "java.util.List — lista, tj. kolekcja o określonej pozycji (nie mylmy z sortowaniem!). Możemy odwołać się do elementu po numerze kolejnym, np. ‘podaj element na pozycji 1’. Ten sam obiekt może występować na kilku pozycjach, -java.util.Set — zbiór, tj. kolekcja, która przechowuje obiekty bez określenia pozycji (ale może przechowywać je w sposób uporządkowany — tj. posortowany). Ten sam obiekt może występować tylko raz w danej kolekcji, -java.util.Queue — kolejka, czyli lista umożliwiająca implementację kolejek FIFO i FILO. Kolejki działają analogicznie jak w sklepie, elementy dodawane trafiają na koniec kolejki, możemy najpierw ‘obsłużyć’ osobę z początku kolejki (FIFO) lub z jej końca (FILO), -java.util.Map — mapa, nie jest to stricte kolekcja, ale jako taką będziemy ją traktować. Mapa przechowuje mapowania klucz-wartość, przy czym klucz musi być unikalny. Można o niej myśleć jak o indeksie czy spisie treści (spis treści mapuje nazwę rozdziału na rozdział, gdzie nazwa rozdziału jest kluczem a sam rozdział (jego treść) wartością)",
+    "category": "Java SE"
+  },
+  {
+    "id": 54,
+    "question": "Wymienic 3 metody na Streamach",
+    "answer": ".filter .map .distinct .forEach .toArray .collect",
+    "category": "Java SE"
+  },
+  {
+    "id": 55,
+    "question": "Wymien instrukcje warunkowe w Java",
+    "answer": "Instrukcja if, else if, else oraz jeśli mamy kilka warunków if następujących po sobie możemy zamienić je na inną konstrukcję – switch.",
+    "category": "Java SE"
+  },
+  {
+    "id": 56,
+    "question": "Jak wyglada struktura switch",
+    "answer": "swich case 1: break case 2:break defoult break",
+    "category": "Java SE"
+  },
+  {
+    "id": 57,
+    "question": "Jaki jest podzial wyjatkow w Javie?",
+    "answer": "Wyróżniamy dwa rodzaje wyjątków, tak zwane “checked exceptions” oraz “unchecked exceptions”. Różnica między nimi sprowadza się do tego, że te pierwsze muszą być obsłużone przez programistę, wymaga tego kompilator. Przykładowym wyjątkiem typu unchecked jest IllegalArgumentException, natomiast IOException jest wyjątkiem typu checked. Reguła podziału wyjątków na te dwa rodzaje jest prosta. Jeśli wyjątek w swojej hierarchii dziedziczenia ma Exception i nie ma RuntimeException jest wyjątkiem typu checked. W każdym innym przypadku jest to wyjątek typu unchecked.",
+    "category": "Java SE"
+  },
+  {
+    "id": 58,
+    "question": "Drobne pytania o daty (np ktorej klasy uzylbys do wyswietlenia samej daty, ktorej do daty z godzina)",
+    "answer": "LocalTime — reprezentuje czas, bez powiązania go z konkretną strefą czasową czy lokalizacją geograficzną czy nawet datą, -LocalDate — reprezentuje datę, bez powiązania jej z konkretną strefą czasową czy lokalizacją geograficzną, -LocalDateTime — ta klasa łączy dwie powyższe — datę oraz czas, w rozumieniu lokalnym dla obserwatora, -Instant — ta klasa wyróżnia się na tle pozostałych tym, że reprezentuje konkretny i jednoznacznie określony punkt w czasie (z dokładnością do nanosekundy — w przeciwieństwie do milisekund w przypadku java.util.Date). Drugą ważną cechą jest to, że nie jest ona powiązana z konceptem dni czy lat, a jedynie z uniwersalnym czasem, tzw. UTC . W skrócie przechowuje ona wewnętrznie liczbę sekund (z dokładnością do nanosekund) od pewnego ustalonego punktu w czasie (1 stycznia 1970 roku — tzw. Epoch time).",
+    "category": "Java SE"
+  },
+  {
+    "id": 59,
+    "question": "Czy mozemy uzyc dowolnej klasy w Javie jako klucza w Hash Mapie?",
+    "answer": "Tak, musimy w takiej klasie zaimplementowac metody hashCode() i equals(). Pozwola nam one porownywac obiekty takiej klasy po wybranym polu. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 60,
+    "question": " Z czego zbudowana jest metoda equals (co sprawdza w srodku)?",
+    "answer": "porównać wartość referencji, -sprawdzić, czy przekazany jako argument obiekt nie jest wartością null, -sprawdzić, czy przekazany obiekt jest tego samego typu co obiekt, w na którym operujemy, a jeśli tak to dokonać rzutowania, -porównać poszczególne pola obiektu zwracając uwagę na to, czy nie są one wartościami null i a jeśli są typami obiektowymi, to porównywać je także poprzez metode equals, a nie ==",
+    "category": "Java SE"
+  }
+]

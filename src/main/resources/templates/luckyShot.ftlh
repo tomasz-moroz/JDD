@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <#include "css.ftlh">
+    <meta charset="utf-8">
 </head>
 <body>
 
+<div class="row">
+    <div class="col">
+        <h2>Kategoria:
+            <p><#if category??>
+                ${category} </p>
+            <#else >
+            Category not found</#if></p> </h2>
+        <div class="tabs">
+            <div class="tab">
+                <input type="checkbox" id="chck1">
+                <label class="tab-label" for="chck1">Pytanie:</label>
+                <div class="tab-content">
+                    <p><#if question??>
+                        ${question} </p>
+                    <#else >
+                    Question not found</#if></p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" id="chck2">
+                <label class="tab-label" for="chck2">Odpowiedz</label>
+                <div class="tab-content">
+                    <p><#if answer??>
+                        ${answer} </p>
+                    <#else >
+                    Answer not found</#if></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<form action="/template/randomQuestion" method="get">
+    <input type="submit" name="save" value="Losuj kolejne">
+</form>
+<a href="/start">Powrot do strony glownej</a>
+
+</body>
+</html>
+
+<#--
+
 <div class="accordion">
-    <h2>Kategoria:<p><#if category??>
+    <h2>Kategoria:
+        <p><#if category??>
             ${category} </p>
         <#else >
         Category not found</#if></p> </h2>
@@ -32,11 +77,4 @@
             Answer not found</#if></p>
         </div>
     </div>
-</div>
-
-<form action="/template/randomQuestion" method="get">
-    <input type="submit" name="save" value="Losuj kolejne">
-</form>
-<a href="/start">Powrot do strony glownej</a>
-</body>
-</html>
+</div>-->
