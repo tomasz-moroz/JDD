@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import pl.jjd.jjd.dto.QuestionDto;
 import pl.jjd.jjd.service.QuestionService;
 
@@ -15,6 +16,11 @@ public class QuestionPostController {
 
     public QuestionPostController(QuestionService questionService) {
         this.questionService = questionService;
+    }
+
+    @RequestMapping(path = "/addQuestion")
+    public String addQuestion(){
+        return "questionPost";
     }
 
     @PostMapping(path = "/questionPost")

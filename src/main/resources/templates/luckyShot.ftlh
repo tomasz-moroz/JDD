@@ -15,7 +15,7 @@
             Category not found</#if></p> </h2>
         <div class="tabs">
             <div class="tab">
-                <input type="checkbox" id="chck1">
+                <input type="checkbox" id="chck1" >
                 <label class="tab-label" for="chck1">Pytanie:</label>
                 <div class="tab-content">
                     <p><#if question??>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="tab">
-                <input type="checkbox" id="chck2">
+                <input type="checkbox" id="chck2" >
                 <label class="tab-label" for="chck2">Odpowiedz</label>
                 <div class="tab-content">
                     <p><#if answer??>

@@ -26,14 +26,4 @@ public class LuckyShotController {
         return "luckyShot";
     }
 
-    @GetMapping(path = "/randomQuestion")
-    public String showRandom(Model model, LuckyShotService luckyShotService) {
-        QuestionDto question = questionService.findRandomQuestion();
-        model.addAttribute("question", question.getQuestion());
-        model.addAttribute("answer", question.getAnswer());
-        model.addAttribute("category", question.getCategory());
-        return "luckyShot";
-    }
-
-
 }
