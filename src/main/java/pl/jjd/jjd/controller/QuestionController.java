@@ -10,7 +10,6 @@ import javax.validation.Valid;
 import pl.jjd.jjd.service.QuestionService;
 
 @RestController
-@RequestMapping(path ="/questions")
 public class QuestionController {
 
     private QuestionService questionService;
@@ -19,7 +18,7 @@ public class QuestionController {
         this.questionService = questionService;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/questions/list")
     public Iterable<QuestionDto> questions() {
         return questionService.findAll();
     }
@@ -29,16 +28,16 @@ public class QuestionController {
         return questionService.saveQuestion(questionDto);
     }
 
-    @GetMapping(path = "/{id}")
+    @GetMapping(path = "/questions/{id}")
     public QuestionDto findById(@PathVariable Long id) throws ChangeSetPersister.NotFoundException {
         return questionService.findById(id);
     }
 
-    @PutMapping(path = "/{id}")
+    @PutMapping(path = "/questions/{id}")
     public QuestionDto edit(@PathVariable Long id, @Valid @RequestBody QuestionDto questionDto) throws ChangeSetPersister.NotFoundException {
         return questionService.edit(id, questionDto);
     }
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping(path = "/questions/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Long id) {
         questionService.delete(id);

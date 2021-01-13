@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <#include "css.ftlh">
+    <link rel="stylesheet" href="styles/style.css"/>
     <meta charset="utf-8">
 </head>
 <body>

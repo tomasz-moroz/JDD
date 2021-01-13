@@ -17,7 +17,7 @@ public class QuestionPostController {
         this.questionService = questionService;
     }
 
-    @PostMapping(path = "/template/questionPost")
+    @PostMapping(path = "/questionPost")
     public String questionPost(Model model, QuestionDto questionDto){
 
         model.addAttribute("question", questionDto.getQuestion());

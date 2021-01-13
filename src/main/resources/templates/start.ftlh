@@ -15,7 +15,7 @@
       <nav class="menu">
         <a href="/luckyShot">Losowe pytanie</a>
         <a href="/categories">Przegladaj kategorie</a>
-        <a href="/template/form">Dodaj pytanie</a>
+        <a href="form">Dodaj pytanie</a>
         <a href="/readJson">Wczytaj plik JSON</a>
         <a href="/exportJson">Zapisz pytania do pliku JSON</a>
       </nav>

@@ -17,15 +17,16 @@ public class LuckyShotController {
         this.questionService = questionService;
     }
 
-    @GetMapping(path = "/template/luckyShot")
+    @GetMapping(path = "/luckyShot")
     public String showLuckyShot(Model model, LuckyShotService luckyShotService) {
         QuestionDto question = questionService.findRandomQuestion();
         model.addAttribute("question", question.getQuestion());
         model.addAttribute("category", question.getCategory());
+        model.addAttribute("answer", question.getAnswer());
         return "luckyShot";
     }
 
-    @GetMapping(path = "/template/randomQuestion")
+    @GetMapping(path = "/randomQuestion")
     public String showRandom(Model model, LuckyShotService luckyShotService) {
         QuestionDto question = questionService.findRandomQuestion();
         model.addAttribute("question", question.getQuestion());
