@@ -22,12 +22,18 @@
 
     </header>
 
+    <form action="/search" method="get" style="">
+      <input pattern=".{3,}" required title="Wpisz przynajmniej 3 znaki" type="text" name="questionSearch" id="questionSearchPost"
+             placeholder="Znajdz pytanie?">
+      <button type="submit">Znajdz pytanie</button>
+    </form>
+
     <div class="site-content">
       <div class="container">
 
         <h1>Junior Java Developer interview questions</h1>
 
-        <h2>Animals</h2>
+
         <ul>
           <li>Java SE</li>
           <li>Java EE</li>
@@ -36,8 +42,7 @@
           <li>Hibernate</li>
         </ul>
 
-        <h2 style="background-color: #fff176; display: inline">Hint</h2>
-        <p>Resize the browser window to toggle</p>
+
 
         <h2>Breakfast</h2>
         <figure>

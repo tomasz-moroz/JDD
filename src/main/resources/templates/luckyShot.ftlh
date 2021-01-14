@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles/style.css"/>
     <meta charset="utf-8">
+    <title>Wylosuj pytanie</title>
 </head>
 <body>
 
@@ -39,9 +40,11 @@
 
 </div>
 
-<form action="/template/randomQuestion" method="get">
-    <input type="submit" name="save" value="Losuj kolejne">
-</form>
+
+    <input action="/luckyShot" type="submit" name="save" value="Losuj kolejne">
+
+
+
 <a href="/start">Powrot do strony glownej</a>
 
 </body>

@@ -1,0 +1,752 @@
+[
+  {
+    "id": 7,
+    "question": "Co to jest immutable dla Stringa",
+    "answer": "Nie mozna edytowac Stringa na tym samym miejscu w pamieci, zostanie stworzone nowe jezeli JVM nie znajdzie poprzez String Pool takiego samego stringa. Jezeli znajdzie przypisuje naszego Stringa do Stringa ktory juz istnial, zeby nie tworzyc zbednych kopii tego samego.",
+    "category": "Java SE"
+  },
+  {
+    "id": 8,
+    "question": "Jakie sa trzy rodzaje polimorfizmu w Javie",
+    "answer": "Dziedziczenie, Overiding, Overloading",
+    "category": "Java SE"
+  },
+  {
+    "id": 9,
+    "question": "Co to jest metoda statyczna?",
+    "answer": "Do uruchomienia takiej metody nie potrzebujemy tworzyć obiektu. Wystarczy odwołać się bezpośrednio do klasy",
+    "category": "Java SE"
+  },
+  {
+    "id": 10,
+    "question": "Czy metoda statyczna moze korzystac z niestatycznych zmiennych?",
+    "answer": "Nie moze.",
+    "category": "Java SE"
+  },
+  {
+    "id": 11,
+    "question": "Jakie znasz rodzaje petli w Javie?",
+    "answer": "for, for each, while, do",
+    "category": "Java SE"
+  },
+  {
+    "id": 12,
+    "question": "Jakie wystepuja skladnie wyrazenia warunkowego?",
+    "answer": "lub ||, i &&, wiekszy >, mniejszy<, wiekszy rowny >=, mniejszy rowny <=",
+    "category": "Java SE"
+  },
+  {
+    "id": 13,
+    "question": "Do czego sluzy switch?",
+    "answer": "Switch jest kolejną instrukcją warunkową, jaką mamy do dyspozycji Javie. Używamy tej instrukcji jeśli chcemy porównać zmienną warunkową ze zdefiniowanymi wartościami i na podstawie takiego porównania wykonać określony blok kodu.",
+    "category": "Java SE"
+  },
+  {
+    "id": 16,
+    "question": "ak zaimplementowac metode ktora sprawdza czy wszystkie znaki sa unikatowe?",
+    "answer": "Do setu trzeba wrzucic char array I porownac z char arreyem wrzuconym do arreya I porownac dlugosci. Set przechowuje tylko unikatowe wartosci wiec jezeli jakis znak sie powtarza set bedzie krotrzy niz array. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 17,
+    "question": "Jakie sa implementacje listy? Jaka jest roznica?",
+    "answer": "Linked list – kazdy element wie o poprzednim I o nastepnym, sa top elementy typu node. Array list – bazuje na tablicy",
+    "category": "Java SE"
+  },
+  {
+    "id": 18,
+    "question": "Java Enterprise Edition, Jakie sa elementy w Javie EE?",
+    "answer": "CDI (Context and dependency injection) - wstrzykiwanie zależności, JPA (Java Persistence API) - mapowanie obiektowo relacyjne, EJB (Enterprise Java Beans) - warstwa usług ze wsparciem dla zarządzania transakcjami, JaxRS - specyfikacja dedykowana do tworzenia aplikacji REST, JSF (Java ServerFaces) - framework MVC integrujący się z innymi elementami JEE  ",
+    "category": "Java EE"
+  },
+  {
+    "id": 19,
+    "question": "Czym jest dependecy injection? ",
+    "answer": "Dependency Injection – w skrócie DI, to wzorzec projektowy polegający na tym, że obiekt nie inicjalizuje swoich zależności sam, tylko przyjmuje je z zewnątrz poprzez tzw. „wstrzykiwanie”. Główną zaletą takiego podejścia jest między innymi łatwiejsze pisanie testów jednostkowych. Użycie DI może również sprawi, że nasze obiekty będą ze sobą luźniej powiązane (ang. loose coupling).",
+    "category": "Java EE"
+  },
+  {
+    "id": 20,
+    "question": "Co to jest EJB?",
+    "answer": "technologia działająca po stronie serwera, która jest jednym z elementów specyfikacji JEE. EJB jest podobny do podzbioru możliwości JEE w kontekście zarządzania ziarnami (ang. beans), udostępniającymi usługi takie jak transakcyjność, trwałość, rozproszenie, bezpieczeństwo, wielodostęp itp. Jedyną rzeczą wymaganą od programisty korzystającego ze specyfikacji EJB jest dostosowanie się do pewnego interfejsu EJB (wymogów implementacyjnych), którego zastosowanie zwalnia użytkownika EJB (dostawcy ziarna lub całego modułu ziaren EJB) z konieczności opracowywania własnych metod obsługi komponentów.",
+    "category": "Java EE"
+  },
+  {
+    "id": 22,
+    "question": "Jak zrobic zeby w przypadku 3 opcji zrobic zawsze to samo?",
+    "answer": "W przypadku wielu opcji ktore maja zrobic to samo wymieniamy te case’y po kolei ale zamiast przecinka stawiamy dwukropek",
+    "category": "Java SE"
+  },
+  {
+    "id": 23,
+    "question": "Jak nazywa sie wordkey do wykonania czegos do czego nie pasuje zaden case?",
+    "answer": "default",
+    "category": "Java SE"
+  },
+  {
+    "id": 24,
+    "question": "Jakie sa rodzaje beanow w javie ee?",
+    "answer": "sesyjne EJB (ang. session EJB) bezstanowe i stanowe, sterowane komunikatami EJB (ang. message-driven EJB), encyjne EJB (ang. entity EJB)",
+    "category": "Java EE"
+  },
+  {
+    "id": 25,
+    "question": "Rodzaje scope'ow w Springu",
+    "answer": "@Scope(\"singleton\"), prototype, request, session, application, websocket",
+    "category": "Spring"
+  },
+  {
+    "id": 26,
+    "question": "Jakie znasz relacje pomiedzy encjami?",
+    "answer": "Sa trzy rodzaje relacji:  OneToOne, OneToMany, ManyToMany",
+    "category": "Hibernate"
+  },
+  {
+    "id": 27,
+    "question": "Jak sa realizowane relacje ManyToMany, wiele do wielu?",
+    "answer": "Tworzy sie nowa trabela – tabele posrednia ktora bedzie zawierala pary ID",
+    "category": "Hibernate"
+  },
+  {
+    "id": 28,
+    "question": "Co to jest LAZY loading oraz EAGER loading?",
+    "answer": "LAZY pobiera tylko te pola z encji ktore chcemy, a EAGER pobiera wszzystie pola z encji ktore sa w relacji. ",
+    "category": "Hibernate"
+  },
+  {
+    "id": 29,
+    "question": "Co to jest transakcja?",
+    "answer": "Jest to wiele operacji ktore musza wykonac sie w okreslonej kolejnosci lub zadna. Jezeli cos sie popsuje w trakcje trwania transakcji musi pojsc rollback, a jezeli wszystko sie wykona idzie commit czyli wyslanie transakcji oraz zapisanie wszystkiego co sie dzialo podczas transakcji.",
+    "category": "Java EE"
+  },
+  {
+    "id": 30,
+    "question": "Jak zobaczyc liste 3 ostatnich commitow?",
+    "answer": "Git log -3",
+    "category": "Git"
+  },
+  {
+    "id": 31,
+    "question": "W czym pomaga IDE?",
+    "answer": "-Debugger -Sonar -Pluginy -Poprawnosc kodu",
+    "category": "Java EE"
+  },
+  {
+    "id": 32,
+    "question": "Jaka jest roznica pomidzy JDK I JRE?",
+    "answer": "JRE – Java Runtime Enviroment – ma wszystkie rzeczy niezbedne do uruchomienia aplikacji w Javie  JDK -- Zawiera JRE plus wszystkie niezbedne narzedzia do napisania programum, czyli wbudowane klasy, komplator, calyu kod Javy",
+    "category": "Java SE"
+  },
+  {
+    "id": 33,
+    "question": "Jakie znasz komenty Linuxowe?",
+    "answer": "cat nazwa_pliku – czytanie zawartości pliku, rm nazwa_pliku – usuwa plik,  rmdir nazwa_katalogu – usuwa katalog, mkdir nazwa_katalogu – tworzy katalog, man costam – info o danym poleceniu",
+    "category": "Linux"
+  },
+  {
+    "id": 34,
+    "question": "Do czego sluzy Maven?",
+    "answer": "Maven (ang. “spec”) to narzędzie do budowania projektów napisanych w Javie. Sam Maven także został napisany w tym języku. Maven pozwala w uporządkowany sposób zarządzać zagadnieniami takimi jak: kompilacja, testowanie, budowanie, wynajdowanie i pobieranie zależności, generowanie dokumentacji.",
+    "category": "Maven"
+  },
+  {
+    "id": 35,
+    "question": "Jaki jest sklad zespolu Scrumowego?",
+    "answer": "W skład Zespołu Scrumowego wchodzą: Właściciel Produktu (ang. Product Owner), Zespół Deweloperski (ang. Development Team) oraz Scrum Master. ",
+    "category": "Scrum"
+  },
+  {
+    "id": 36,
+    "question": "Czym jest Daily Standup?",
+    "answer": "Jest to max 15min spotkanie ktorego celem jest: uspójnienie wiedzy, zaplanowanie dalszej pracy, znalezienie potencjalnych problemów",
+    "category": "Scrum"
+  },
+  {
+    "id": 37,
+    "question": "Ile trwa I z czego sklada sie sprint?",
+    "answer": "Sprinty składają się z Planowania Sprintu, Codziennych Scrumów, pracy wytwórczej, Przeglądu Sprintu oraz Retrospektywy Sprintu",
+    "category": "Scrum"
+  },
+  {
+    "id": 40,
+    "question": "Klasa abstrakcyjna vs interface",
+    "answer": "- interfejs opiera się na funkcjonalności, a klasa na implementacji, - klasa może implementować wiele interfejsów, ale rozszerzać jednego rodzica, -wszystkie zadeklarowane metody w interfejsie są publiczne, natomiast metody zadeklarowane w klasach mogą być publiczne lub chronione, -Interfejs może zawierać jedynie deklaracje metod, a klasa abstrakcyjna może zawierać również metody zdefiniowane, -zarówno w interfejsach, jak i klasach można definiować stałe, a wynika to z faktu, że stałe są niezależne od konkretnej instancji, -Klasy abstrakcyjne mogą zawierać atrybuty, natomiast interfejsy - nie. Powód jest ten sam, jak przy deklaracjach i definicjach metod   ",
+    "category": "Java SE"
+  },
+  {
+    "id": 41,
+    "question": "Klasa abstrakcyjna",
+    "answer": "-Jest to klasa, z której nie można utworzyć obiektu (w tradycyjny sposób), można po niej jedynie dziedziczyć, -Klasa taka może mieć metody, które posiadają implementację, ale także metody abstrakcyjne czyli takie, które są jedynie deklaracją metody, która powinna zostać zaimplementowana w klasie potomnej, -W Javie jest ograniczenie dziedziczenia do jednej klasy, więc każda klasa potomna może dziedziczyć tylko raz, -Klasa abstrakcyjna, podobnie jak normalna klasa, może przechowywać stan (może mieć pola), który może być dowolnie modyfikowany, -Każda podklasa może nadpisywać zachowania, czyli nadpisywać publiczne i chronione (public i protected)  metody odziedziczone z klasy bazowej",
+    "category": "Java SE"
+  },
+  {
+    "id": 42,
+    "question": "Interfejs w Javie",
+    "answer": "-mogą zawierać jedynie stałe i deklaracje metod, -Od Javy 8 mogą zawierać także metody default i metody statyczne (które mogą zawierać implementację). A od Javy 9 też metody prywatne, -Interfejsy nie mogą mieć stanu, -Służą one do definiowania zachowania dla obiektów. Ale inaczej niż w przypadku klasy abstrakcyjnej nie definiują tego zachowania (metody nie mają implementacji). Każda klasa implementująca interfejs musi mieć implementację metod zawartych w interfejsie, klasy mogą implementować wiele interfejsów, -Metody default i statyczne zostały wprowadzone w Javie 8 w celu poprawienia kompatybilności wstecznej. Wprowadzenie ich pozwala zmieniać interfejsy, które zostały już zaimplementowane przez różne klasy, ale nie wymusza automatycznie zmian implementacji tych klas.",
+    "category": "Java SE"
+  },
+  {
+    "id": 43,
+    "question": "Lazy vs Eager",
+    "answer": "Gdy mamy relacje np. Uczelnia i studenci przy ladowaniu Eager zaladuje nam liste studentow ze wszystkimi polami, natomiast przy Lazy, musimy zarzadac getStudents() zeby wyswietlilo nam te pola. Jednym slowem nie potrzebujemy zazwyczaj calej zawartosi bazy danych, po to sa te oznaczenia",
+    "category": "Hibernate"
+  },
+  {
+    "id": 44,
+    "question": "CDI, EJB - krotko opisac co to, zasada dzialania.",
+    "answer": "Przewagą EJB nad CDI będzie fakt, że kontener przejmie kontrolę nad transakcjami, bezpieczeństwem, współbieżnością, pulami obiektów, -@EJB pozwala na wstrzykiwanie tylko i wyłącznie obiektów zarządzanych przez kontener EJB, -@Inject obsługiwana jest przez kontener CDI i pozwala na wstrzykiwanie zarówno obiektów zarządzanych przez kontener EJB jak i pozostałych beanów.",
+    "category": "Java EE"
+  },
+  {
+    "id": 45,
+    "question": "Co to \"widok\"  w SQL?",
+    "answer": "Widok (ang View) to tak naprawdę zwykła tabela „wirtualna”, którą tworzymy za pośrednictwem normalnego zapytania. Z widoku korzystamy jak ze zwykłej tabeli, możemy więc wykonywać „na nim” dowolne kwerendy. Jest jednak pewna różnica w stosunku do dotychczas używanych tabel. Mianowicie widoki do póki nie zostanie utworzony dla nich indeks nie mają fizycznej reprezentacji swoich danych. Na podstawie jednego widoku mozemy tworzyc kolejne (czyli kolejne tabele) z odpowiednimi zaproponawanymi przez nas ograniczeniami.",
+    "category": "SQL"
+  },
+  {
+    "id": 46,
+    "question": "Co to LinkedList, zasada dzialania, na czym zbudowana (co pod spodem)?",
+    "answer": "LinkedList - implementacja wiązana, to lista dwukierunkowa czyli każdy element przechowuje odniesienie do poprzedniego i kolejnego elementu listy. Gdy zamierzamy czesto dodawac cos i usuwa z listy lepsza bedzie LinkedList, bo jest szybsza.",
+    "category": "Java SE"
+  },
+  {
+    "id": 47,
+    "question": "Co to ArrayList, zasada dzialania, na czym zbudowana (co pod spodem)?",
+    "answer": "ArrayList – jest to podstawowa implementacja listy w Javie. Można też ją określić jako samo-rozszerzalną tablicę, ponieważ jej implementacja bazuje na tablicy, która jest powiększana wraz ze wzrostem rozmiaru listy. Dzięki temu, jest to najwydajniejsza implementacja listy w Javie (w bibliotece standardowej).",
+    "category": "Java SE"
+  },
+  {
+    "id": 48,
+    "question": "Co znaczy obiekt \"immutable\"?",
+    "answer": "Niezmienialny obiekt to taki, który raz zainicjalizowany nie zmieni swojego stanu. O co dokładnie chodzi? Mamy gwarancję, że wszystkie dane (pola) w konkretnym obiekcie nie ulegną zmianie. Żeby zmodyfikować jakieś wartości, trzeba utworzyć całkowicie nowy obiekt.",
+    "category": "Java SE"
+  },
+  {
+    "id": 49,
+    "question": "Czym jest Java EE?",
+    "answer": "JavaEE (Java for Enterprise Edition) jest platformą do tworzenia aplikacji biznesowych agregującą zestaw specyfikacji dla języka Java, które w założeniu mają upraszczać rozwiązywanie złożonych i powtarzalnych problemów związanych z wytwarzaniem oprogramowania. -serwerowa platforma programistyczna, -definiuje standard oparty na wielowarstwowej architekturze komponentowej,  -określa zbiór interfejsów jakich implementację musi dostarczać zgodny serwer aplikacyjny, -specyfikacja zestawu API dla Javy ma na celu usprawnić wytwarzanie komercyjnego oprogramowania",
+    "category": "Java EE"
+  },
+  {
+    "id": 50,
+    "question": "Co to Transactional (+Commmit i Rollback w transakcjach)?",
+    "answer": "Transakcja to zbiór operacji (u nas - instrukcji języka SQL), które mogą być wykonane jedynie wszystkie lub żadna.  Nazwa takiego ciągu instrukcji pochodzi od operacji bankowych - przelew musi jednocześnie zabrać z jednego konta i dodać na drugie. W przypadku niepowodzenia żadna z tych operacji nie powinna mieć miejsca. Jeśli zajdzie tylko jedna skutki mogłyby być katastrofalne. COMMIT – zatwierdzenie zmian wykonanych w obrębie transakcji,  ROLLBACK – odrzucenie zmian wykonanych w obrębie transakcji",
+    "category": "SQL"
+  },
+  {
+    "id": 51,
+    "question": "Nowosci w Java 8",
+    "answer": "Zmiany w interfejsach Od wersji Javy 8, istnieje możliwość nie tylko deklaracji metod, ale i również ich definicji (metody domyślne) w interfejsach. Takie rozwiązanie umożliwia tworzenie metod, które nie muszą być definiowane w klasach implementujących dany interfejs, -Wyrażenia lambda Wyrażenia lambda to funkcje anonimowe, czyli takie, które nie posiadają nazwy. -Strumienie są wygodną konstrukcją języka Java 8, która pozwala na wykonywanie operacji na elementach kolekcji (potok) bez konieczności magazynowania tych danych, -Nashorn to mechanizm, który umożliwia współpracę języka JavaScript oraz języka Java, -Zmiany w adnotacjach Specyfikacja pozwala wykorzystać adnotacje nie tylko do dekorowania metod, pól, bądź konstruktorów czy klas, ale także umożliwia dekorowanie dowolnego użytego w kodzie typu.",
+    "category": "Java SE"
+  },
+  {
+    "id": 52,
+    "question": "Role w Scrum",
+    "answer": "Product Owner (Właściciel produktu) – pełni rolę reprezentanta klienta, -Scrum Master – to swoisty przywódca duchowy zespołu i osoba odpowiedzialna za rozumienie teorii Scruma przez zespół oraz przestrzeganie przyjętych zasad, -Zespół Deweloperski – zespół składa się ze specjalistów w swojej branży posiadających wszystkie niezbędne kompetencje, by z powodzeniem realizować powierzone im zadania.",
+    "category": "Scrum"
+  },
+  {
+    "id": 53,
+    "question": "Jakie sa kolekcje w Javie? Wymienic podzial.",
+    "answer": "java.util.List — lista, tj. kolekcja o określonej pozycji (nie mylmy z sortowaniem!). Możemy odwołać się do elementu po numerze kolejnym, np. ‘podaj element na pozycji 1’. Ten sam obiekt może występować na kilku pozycjach, -java.util.Set — zbiór, tj. kolekcja, która przechowuje obiekty bez określenia pozycji (ale może przechowywać je w sposób uporządkowany — tj. posortowany). Ten sam obiekt może występować tylko raz w danej kolekcji, -java.util.Queue — kolejka, czyli lista umożliwiająca implementację kolejek FIFO i FILO. Kolejki działają analogicznie jak w sklepie, elementy dodawane trafiają na koniec kolejki, możemy najpierw ‘obsłużyć’ osobę z początku kolejki (FIFO) lub z jej końca (FILO), -java.util.Map — mapa, nie jest to stricte kolekcja, ale jako taką będziemy ją traktować. Mapa przechowuje mapowania klucz-wartość, przy czym klucz musi być unikalny. Można o niej myśleć jak o indeksie czy spisie treści (spis treści mapuje nazwę rozdziału na rozdział, gdzie nazwa rozdziału jest kluczem a sam rozdział (jego treść) wartością)",
+    "category": "Java SE"
+  },
+  {
+    "id": 54,
+    "question": "Wymienic 3 metody na Streamach",
+    "answer": ".filter .map .distinct .forEach .toArray .collect",
+    "category": "Java SE"
+  },
+  {
+    "id": 55,
+    "question": "Wymien instrukcje warunkowe w Java",
+    "answer": "Instrukcja if, else if, else oraz jeśli mamy kilka warunków if następujących po sobie możemy zamienić je na inną konstrukcję – switch.",
+    "category": "Java SE"
+  },
+  {
+    "id": 56,
+    "question": "Jak wyglada struktura switch",
+    "answer": "swich case 1: break case 2:break defoult break",
+    "category": "Java SE"
+  },
+  {
+    "id": 57,
+    "question": "Jaki jest podzial wyjatkow w Javie?",
+    "answer": "Wyróżniamy dwa rodzaje wyjątków, tak zwane “checked exceptions” oraz “unchecked exceptions”. Różnica między nimi sprowadza się do tego, że te pierwsze muszą być obsłużone przez programistę, wymaga tego kompilator. Przykładowym wyjątkiem typu unchecked jest IllegalArgumentException, natomiast IOException jest wyjątkiem typu checked. Reguła podziału wyjątków na te dwa rodzaje jest prosta. Jeśli wyjątek w swojej hierarchii dziedziczenia ma Exception i nie ma RuntimeException jest wyjątkiem typu checked. W każdym innym przypadku jest to wyjątek typu unchecked.",
+    "category": "Java SE"
+  },
+  {
+    "id": 58,
+    "question": "Drobne pytania o daty (np ktorej klasy uzylbys do wyswietlenia samej daty, ktorej do daty z godzina)",
+    "answer": "LocalTime — reprezentuje czas, bez powiązania go z konkretną strefą czasową czy lokalizacją geograficzną czy nawet datą, -LocalDate — reprezentuje datę, bez powiązania jej z konkretną strefą czasową czy lokalizacją geograficzną, -LocalDateTime — ta klasa łączy dwie powyższe — datę oraz czas, w rozumieniu lokalnym dla obserwatora, -Instant — ta klasa wyróżnia się na tle pozostałych tym, że reprezentuje konkretny i jednoznacznie określony punkt w czasie (z dokładnością do nanosekundy — w przeciwieństwie do milisekund w przypadku java.util.Date). Drugą ważną cechą jest to, że nie jest ona powiązana z konceptem dni czy lat, a jedynie z uniwersalnym czasem, tzw. UTC . W skrócie przechowuje ona wewnętrznie liczbę sekund (z dokładnością do nanosekund) od pewnego ustalonego punktu w czasie (1 stycznia 1970 roku — tzw. Epoch time).",
+    "category": "Java SE"
+  },
+  {
+    "id": 59,
+    "question": "Czy mozemy uzyc dowolnej klasy w Javie jako klucza w Hash Mapie?",
+    "answer": "Tak, musimy w takiej klasie zaimplementowac metody hashCode() i equals(). Pozwola nam one porownywac obiekty takiej klasy po wybranym polu. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 60,
+    "question": " Z czego zbudowana jest metoda equals (co sprawdza w srodku)?",
+    "answer": "porównać wartość referencji, -sprawdzić, czy przekazany jako argument obiekt nie jest wartością null, -sprawdzić, czy przekazany obiekt jest tego samego typu co obiekt, w na którym operujemy, a jeśli tak to dokonać rzutowania, -porównać poszczególne pola obiektu zwracając uwagę na to, czy nie są one wartościami null i a jeśli są typami obiektowymi, to porównywać je także poprzez metode equals, a nie ==",
+    "category": "Java SE"
+  },
+  {
+    "id": 61,
+    "question": " Z czego zbudowana jest metoda hashcode (co sprawdza w srodku)?",
+    "answer": "Hashcode jest wyjatkowym integerem dla danej instancji obiektu wiec musimy stworzyc dzialanie tworzace wyjatkowa cyfre. Istnieją różne algorytmy pozwalające wyliczyć hashCode, wszystkie łączy to, że powinniśmy wykorzystać w nich liczbę pierwszą (powyżej 31), następnie wykonać przesunięcia bitowe. NP.:public int hashCode() {         return 17 * model.hashCode() + 31 * manufacturer.hashCode() + 7 * productionYear;     }",
+    "category": "Java SE"
+  },
+  {
+    "id": 62,
+    "question": "Co to kontener aplikacji?",
+    "answer": "Web container to zbiór narzędzi, które pozwalają uruchomić aplikacje internetową, bez dostarczania jej dodatkowych usług. Wszelkie dodatkowe usługi – bezpieczeństwo, transakcyjność, bazy danych itd. zostają zrzucone na aplikacje, która ma zostać wdrożona. Mówiąc prostymi słowami – to programista w czasie tworzenia musi zadbać, aby aplikacja miała wszelkie niezbędne biblioteki, które umożliwią jej pełne funkcjonowanie.",
+    "category": "Java EE"
+  },
+  {
+    "id": 63,
+    "question": "Do czego służy polecenie distinct?",
+    "answer": "DISTINCT służy do pobrania z tabeli unikatowych danych, które nie będą się powtarzać.",
+    "category": "SQL"
+  },
+  {
+    "id": 64,
+    "question": "Czy w zapytaniu można wyświetlić tą samą kolumnę więcej niż jeden raz?",
+    "answer": "Tak, różnica pojawi się, jeśli w kolumnie, którą zliczamy wystąpią wartości NULL. W przypadku zliczania count(nazwa_kolumny) wartości NULL zostaną pominięte i nie zostaną dodane do zwróconego wyniku. Odwrotnie jest w przypadku count(*) - tutaj wszystkie występujące wartości NULL nie zostaną pominięte i zostaną dodane do zwróconego wyniku.",
+    "category": "SQL"
+  },
+  {
+    "id": 65,
+    "question": "Do czego służy polecenie group by?",
+    "answer": "Agregacja (inaczej zawieranie się, gromadzenie) Podział wierszy na logiczne grupy umożliwia klauzula GROUP BY. Podstawą zaklasyfikowania wiersza do danej grupy jest wartość jednej z kolumn lub wynik wyrażenia.",
+    "category": "SQL"
+  },
+  {
+    "id": 66,
+    "question": "Jakie sa funkcje agregujące i kiedy można ich użyć?",
+    "answer": "Funkcje agregujące zwracają podsumowania dla całej tabeli lub grupy wierszy w tabeli. Podsumowaniem może być suma, średnia, ilość wierszy czy nawet wariancja z tabeli lub określonej grupy rekordów. -AVG(nazwa_kolumny) Zwraca wartość średnią, -COUNT(*) Zwraca liczbę wybranych wierszy, -COUNT(nazwa_kolumny) Zwraca liczbe wierszy w zbiorze, - MAX(column_name) Zwraca największą wartość w zbiorze, -MIN(column_name) Zwraca najmniejszą wartość w zbiorze, -SUM(column_name) Zwraca sumę kolumn ze zbioru wierszy",
+    "category": "SQL"
+  },
+  {
+    "id": 67,
+    "question": "Czym się różnie where od having?",
+    "answer": "Najprościej mówiąc WHERE służy do filtrowania wierszy przed grupowaniem (agregowaniem), natomiast HAVING służy do filtrowania danych po grupowaniu bądź wyników funkcji agregujących.",
+    "category": "SQL"
+  },
+  {
+    "id": 68,
+    "question": "Jakie są rodzaje joinów?",
+    "answer": "JOIN (INNER JOIN) - est to złączenie wewnętrzne i jako wynik otrzymujemy tylko dopasowane wiersze, OUTER JOIN - Jest to złączenie zewnętrzne będące rozszerzeniem złączenia wewnętrznego, LEFT JOIN (LEFT OUTER JOIN) -  Jest to złączenie zewnętrzne lewostronne,  RIGHT JOIN (RIGHT OUTER JOIN) - Jest to złączenie zewnętrzne prawostronne., FULL JOIN (FULL OUTER JOIN) - Jest to złączenie zewnętrzne pełne, CROSS JOIN - Jest to złączenie wszystkich wierszy jednej tabeli ze wszystkimi wierszami z drugiej tabeli, SELF JOIN - Jest to połączenie tabeli samej z sobą, APPLY (CROSS APPLY, OUTER APPLY)  -   „Potrzebuję wyciągnąć pewne informacje z różnych tabel, ale nie wiem jak to zrobić.” – tutaj często odpowiedzią jest: skorzystaj z APPLY",
+    "category": "SQL"
+  },
+  {
+    "id": 69,
+    "question": "Co będzie szybsze, \"like\" czy \"=\"?",
+    "answer": "Porównanie jest zdecydowanie szybsze od LIKE. Dodanie indeksu może trochę poprawić wydajność wyrażeń wieloznacznych, lecz nadal będą one znacznie wolniejsze od porównania. Dzieje się tak dlatego, że LIKE jest dużo bardziej skomplikowaną operacja i sama złożoność daje narzut czasu wykonania.",
+    "category": "SQL"
+  },
+  {
+    "id": 70,
+    "question": "Czy można łączyć więej niż dwie tabele?",
+    "answer": "Tak",
+    "category": "SQL"
+  },
+  {
+    "id": 71,
+    "question": "Czy można złączyć tabelę samą ze sobą?",
+    "answer": "Złączenie tabeli z samą sobą występuje, gdy po lewej i prawej stronie złączenia występuje ta sama tabela. Konieczne jest w nim użycie aliasów.  Ma zastosowanie, jeżeli chcemy porównać wybrane rekordy tabeli z innymi rekordami tej samej tabeli.",
+    "category": "SQL"
+  },
+  {
+    "id": 72,
+    "question": "Ile w jednej tabeli może być kluczy głównych?",
+    "answer": "PRIMARY KEY moze byc jeden, ale moze byc zlozony",
+    "category": "SQL"
+  },
+  {
+    "id": 73,
+    "question": "Ile w jednej tabeli może być kluczy obcych?",
+    "answer": "Klucz obcy (ang. foreign key)  to kombinacja jednego lub więcej pól w danej tabeli z wartościami, stanowiącymi klucz główny w innej. Wykorzystuje się go do tworzenia relacji pomiędzy parą tabel, gdzie w jednej tabeli ten zbiór atrybutów jest kluczem obcym, a w drugiej kluczem głównym.",
+    "category": "SQL"
+  },
+  {
+    "id": 74,
+    "question": "Do czego służą indeksy?",
+    "answer": "Indeksy są podstawowym mechanizmem, który służy do poprawy wydajności wykonywania zapytań w bazie danych. Jest to dodatkowa struktura danych, przechowywana obok tabeli, zoptymalizowana pod kątem wyszukiwania.",
+    "category": "SQL"
+  },
+  {
+    "id": 75,
+    "question": "Do czego służą partycje?",
+    "answer": "Partycjonowanie to proces bazy danych, w którym bardzo duże tabele są podzielone na wiele mniejszych części. Dzięki temu, zapytania, które uzyskują dostęp tylko do części danych, mogą działać szybciej, ponieważ jest mniej danych do zeskanowania. Głównym celem partycjonowania jest pomoc w utrzymaniu dużych tabel i zmniejszenie ogólnego czasu reakcji na odczytywanie i ładowanie danych dla poszczególnych operacji SQL. Zapewnia to skalowalność i łatwość zarządzania.",
+    "category": "SQL"
+  },
+  {
+    "id": 76,
+    "question": "Czym się różni truncate od delete?",
+    "answer": "Oba usuwają wiersz z tabeli – TRUNCATE wszystkie, DELETE dowolnie wybrane przez użytkownika. Główna i najważniejsza różnica to, że TRUNCATE jest szybszy od DELETE, a zawdzięcza to temu, że nie zapisuje każdej operacji usunięcia w logach. Natomiast DELETE loguje wszystkie zmiany, przez co jest wolniejszy.",
+    "category": "SQL"
+  },
+  {
+    "id": 77,
+    "question": "Czym się różni delete od drop?",
+    "answer": "DELETE to polecenie języka manipulacji danymi, natomiast polecenie DROP to polecenie języka definicji danych. Punktem, który odróżnia polecenie DELETE i DROP jest to KASOWAĆ służy do usuwania krotek ze stołu i UPUSZCZAĆ służy do usuwania całego schematu, tabeli, domeny lub ograniczeń z bazy danych. Działania wykonane przez DELETE można wycofać, Działania wykonane przez DROP nie mogą być wycofane. Nawet jeśli usuniesz wszystkie krotki tabeli za pomocą DELETE, przestrzeń zajmowana przez tabelę w pamięci nie zostanie zwolniona. Tabela usunięta przy użyciu DROP zwalnia obszar tabel z pamięci.",
+    "category": "SQL"
+  },
+  {
+    "id": 78,
+    "question": "Czy w truncate można stosowac warunki?",
+    "answer": "TRUNCATE usuwa wszystkie dane, brak możliwości filtrowania",
+    "category": "SQL"
+  },
+  {
+    "id": 79,
+    "question": "Jakiej funkcji można użyć w zapytaniu, by zamiast NULLi wyświetlić inne wartości lub watość domyślną?",
+    "answer": "IS NOT NULL?",
+    "category": "SQL"
+  },
+  {
+    "id": 80,
+    "question": "Czym różni się union od union all?",
+    "answer": "Różnica polega na tym, że w wyniku operacji UNION usunięte zostają duplikaty powstałe po łączeniu zbiorów, a wynikiem operacji UNION ALL będą wszystkie wpisy z obu zbiorów (duplikaty nie zostają usunięte).  Ważne! Łączone zbiory muszą być zbudowane w ten sam sposób, a dokładniej mówiąc: - muszą mieć identyczną liczbę kolumn - typy odpowiadających sobie kolumn muszą być kompatybilne",
+    "category": "SQL"
+  },
+  {
+    "id": 81,
+    "question": "Czym jest polecenie minus?",
+    "answer": "Instrukcje MINUS/EXCEPT (zależnie od dialektu) wybierają z pierwszego zestawu dane, których nie ma w drugim zestawie wybieranym klauzulą SELECT. Konstrukcja ta może być bardzo przydatna.  -- SELECT Nazwa, Region FROM Miejscowosci1 MINUS SELECT Nazwa, Region FROM Miejscowosci2",
+    "category": "SQL"
+  },
+  {
+    "id": 82,
+    "question": "Czym jest intersect?",
+    "answer": "INTERSECT – część wspólna zbiorów Do wyznaczenia części wspólnej zbiorów, używamy operatora INTERSECT. Podobnie jak EXCEPT, zaimplementowany w SQL Server, został również tylko jako INTERSECT DISTINCT, czyli części wspólna dwóch zbiorów z usunięciem duplikatów.",
+    "category": "SQL"
+  },
+  {
+    "id": 83,
+    "question": "Jak ogarniczyć ilośc wyświetlonych rekordów w zapytaniu?",
+    "answer": "za pomoca polecenia LIMIT, SELECT nazwa_pola FROM nazwa_tabeli LIMIT wartosc",
+    "category": "SQL"
+  },
+  {
+    "id": 84,
+    "question": "Jak pokazać ograniczoną ilość rekordów dodatkowo przesuniętych o daną ilość wierszy? Np. miejsca 4-6 rankingu",
+    "answer": "LIMIT 3 OFFSET 3 - czyli 3 rekory przesuniete o 3 miejsca od gory do 4 miejsca",
+    "category": "SQL"
+  },
+  {
+    "id": 85,
+    "question": "Po co tworzy się relacje w bazie danych i tablice słownikowe?",
+    "answer": "Relacyjna baza danych to opisany i zorganizowany zbiór tabel połączonych relacjami – związkami między sobą. Ten sposób przechowywania informacji pozwala na uniknięcie redundancji (powtarzania się danych) oraz przeprowadzanie analiz na podstawie wielu tabel.   Każda tabela składa się z rekordów (tak nazywamy pojedyncze wiersze). Poszczególne rekordy składają się z pól (komórek), przechowujących jedną daną. Tabela slownikowa jest to tabela opisujaca obiekt (zawiera wszystkie pola) wystepujacy w bazie danych. np. mamy tabele z ocenami, a w niej nazwisko nauczyciela wystawiajacego ocene, tabela slownikowa bedzie tabela opisujaca nauczyciela.  ",
+    "category": "SQL"
+  },
+  {
+    "id": 86,
+    "question": "Czym jest widok, do czego go stosować i czym różni się od tabeli?",
+    "answer": "Widoki Jeśli często wykonujemy jakiej zapytanie do bazy danych, np. z użyciem wielu tabel lub po prostu długie, możemy zdefiniować widok. Korzystanie z niego będzie o wiele wygodniejsze. Możemy pobierać z niego dane jak ze zwykłej tabeli. Nagle długie zapytanie z wieloma parametrami do którego często trzeba coś dodawać możemy zamienić w mniej więcej coś takiego: SELECT * FROM NAZWA_WIDOKU Widoki są strukturami całkowicie dynamicznymi, tzn. zapytanie, które je definiuje w momencie definicji jest tylko sprawdzane pod względem poprawności składniowej i semantycznej, natomiast nie jest wykonywane. Zapytanie to jest wykonywane w momencie odwoływania się do widoku. Widoki mają też zastosowanie w przypadku nadawania uprawnień. Możemy chcieć udostępnić użytkownikowi tylko część danych, lub część kolumn z tabeli. W takim wypadku tworzymy widok o zadanych właściwościach, a użytkownikowi zezwalamy na dostęp do widoku a nie tabeli.",
+    "category": "SQL"
+  },
+  {
+    "id": 87,
+    "question": "Co to jest sekwencja i gdzie warto ją stosować?",
+    "answer": "Sekwencja jest obiektem przypisanym do określonego schematu – nie jest w żaden sposób powiązana z określoną tabelą, a co za tym idzie możliwe jest jej zastosowanie w więcej niż jednej tabeli.  Sekwencje stosujemy często w celu tworzenia kluczy głównych tabel. -- Create sequence moja_sekwencja Minvalue 0 Maxvalue 99999 Start with 0 Increment by 1; Na podstawie wyżej przytoczonego przykładu: create sequence - Po tym następuje podanie nazwy sekwencji. W nazwie sekwencji nie może być spacji. Minvalue - Wartość minimalna jaką może przybrać sekwencja. Maxvalue - Wartość maksymalna jaką może przybrać sekwencja. Start with - Określa wartość od jakiej ma się rozpoczynać sekwencja. Increment by - Określa wartość o jaką ma się zmieniać aktualny stan sekwencji po każdym pobraniu danych. Jako parametr tego polecenia możemy również podać liczbę ujemną. Wartość sekwencji będzie wtedy maleć.",
+    "category": "SQL"
+  },
+  {
+    "id": 88,
+    "question": "Co to jest trigger?",
+    "answer": "procedura wykonywana automatycznie jako reakcja na pewne zdarzenia w tabeli bazy danych. Wyzwalacze mogą ograniczać dostęp do pewnych danych, rejestrować zmiany danych lub nadzorować modyfikacje danych.",
+    "category": "SQL"
+  },
+  {
+    "id": 89,
+    "question": "Jakie są typy danych w SQL?",
+    "answer": "Liczbowe Tekstowe Daty i czasu Binarne Pozostałe,  BIT, INT, BIGINT, FLOAT, CHAR, NCHAR, VARCHAR, NVARCHAR, DATETIME2, DATETIME, VARBINARY.",
+    "category": "SQL"
+  },
+  {
+    "id": 90,
+    "question": "Czym są operacje CRUD?",
+    "answer": "CRUD (od ang. create, read, update, delete, tłum. utwórz, odczytaj, aktualizuj, usuń) – cztery podstawowe funkcje w aplikacjach korzystających z pamięci trwałej, które umożliwiają zarządzanie nią. W SQL to: Create\tINSERT,  Read (Retrieve) SELECT, Update UPDATE, Delete (Destroy) DELETE ",
+    "category": "SQL"
+  },
+  {
+    "id": 91,
+    "question": "Jakie są polecenia warunkowe w SQL?",
+    "answer": "IF w SELECT (SELECT CASE 1 WHEN 1 THEN 'Prawda' END),  IF ELSE (SELECT CASE 1 WHEN 1 THEN 'Prawda' ELSE 'Fałsz' END),  Pusta sekcja CASE (SELECT CASE WHEN 1=1 THEN 'Prawda' END,  Instrukcja SWITCH (SELECT   CASE 2     WHEN 1 THEN 'Jeden'     WHEN 2 THEN 'Dwa'     WHEN 3 THEN 'Trzy'     ELSE 'Nie wiem'   END))",
+    "category": "SQL"
+  },
+  {
+    "id": 92,
+    "question": "Co to jest Garbage Collector?",
+    "answer": "Odśmiecanie pamięci (ang. garbage collection), zbieranie nieużytków, automatyczna dealokacja – jedna z metod automatycznego zarządzania dynamicznie przydzielaną pamięcią, w której za proces jej zwalniania odpowiedzialny jest nie programista, lecz programowy zarządca noszący nazwę garbage collector",
+    "category": "Java SE"
+  },
+  {
+    "id": 93,
+    "question": "Co to jest JVM?",
+    "answer": "Wirtualna maszyna Javy (ang. Java Virtual Machine, w skrócie JVM) – maszyna wirtualna oraz środowisko zdolne do wykonywania kodu bajtowego Javy.  Wirtualna maszyna Javy to zestaw aplikacji napisanych na tradycyjne urządzenia i systemy operacyjne. Dostarcza środowiska, w którym może się wykonywać program skompilowany do postaci kodu bajtowego Javy, zapewniając takie usługi, jak odśmiecanie pamięci czy obsługę wyjątków oraz bibliotekę standardową. W zależności od potrzeb i liczby dostępnych narzędzi, wyróżniane są dwie główne dystrybucje:  Java Runtime Environment (JRE) – zawiera wyłącznie narzędzia niezbędne do uruchomienia aplikacji, tzw. środowisko uruchomieniowe; Java Development Kit (JDK) – zawiera również narzędzia dla programistów pozwalające na tworzenie aplikacji na platformę JVM.",
+    "category": "Java SE"
+  },
+  {
+    "id": 94,
+    "question": "Jakie znasz rodzaje pętli? Czym się różnią?",
+    "answer": "Pętla while - Pętlę while najczęściej wykorzystuje się w miejscach, gdzie zakładana ilość powtórzeń jest bliżej nieokreślona, ale znamy warunek jaki musi być spełniony, Pętla do while - Różni się ona od pętli while przede wszystkim tym, że to co znajduje się w jej wnętrzu wykona się przynajmniej raz, ponieważ warunek jest sprawdzany dopiero w drugiej kolejności, -Pętla for - Pętlę for od dwóch poprzednich odróżnia przede wszystkim rodzaj zastosowań. W jej przypadku zazwyczaj wiemy dokładnie ile razy ma się jakaś czynność powtórzyć.",
+    "category": "Java SE"
+  },
+  {
+    "id": 95,
+    "question": "Jaka jest różnica między final i finally?",
+    "answer": "Final jest słowem kluczowym, które użyte ze zmienną zamienia ją w stałą. Natomiast użyte wraz z metodą powoduje, iż nie można jej nadpisać. Można również wykorzystać je wraz z klasą – wówczas blokuje ono możliwość dziedziczenia danej klasy, Finally jest elementem bloku try-catch-finally. Operacje zawarte w tej sekcji zostaną zawsze wykonane – niezależnie czy kod zawarty w sekcji catch zakończył się sukcesem, czy rzucił wyjątkiem.",
+    "category": "Java SE"
+  },
+  {
+    "id": 96,
+    "question": "Co to jest referencja?",
+    "answer": "Referencją nazywamy zmienną, która wskazuje na obiekt. Z punktu widzenia pamięci, referencje są po prostu wartością liczbową, która określa lokalizację danego obiektu w pamięci. Referencje, które utworzone są jako zmienne lokalne w ramach metod przechowywane są w ramkach pamięci, które przechowywane są w obszarze pamięci o nazwie stos. Obiekty natomiast przechowywane są na stercie.",
+    "category": "Java SE"
+  },
+  {
+    "id": 97,
+    "question": "Jaka jest różnica między == a equals()?",
+    "answer": "Najważniejszą różnicą jest porównywana informacja. W przypadku operatora '==' porównywana jest przestrzeń pamięci naszej aplikacji. A dokładniej sprawdzane jest czy wartość a i wartość b zapisane są w tym samym miejscu w pamięci naszej wirtualnej maszyny. Jeśli obie zmienne odwołują się do tego samego miejsca, wtedy wartość otrzymana będzie równa true. Jeśli natomiast wartości zmiennych będą identyczne, jednak zapisane w innych miejscach w pamięci - wtedy naszym wynikiem będzie false.  W przypadku metody equals()(przyjmijmy przykład dla zmiennej typu String) porównywana jest wartość (znak po znaku) zmiennej a i b. Niezależnie czy odwołują się one do tego samego miejsca w pamięci czy też nie (oraz przy założeniu że ich wartość jest identyczna) wynik wywołania metody equals() będzie równy true.",
+    "category": "Java SE"
+  },
+  {
+    "id": 98,
+    "question": "Jaka jest różnica między == a equals()?",
+    "answer": "Najważniejszą różnicą jest porównywana informacja. W przypadku operatora '==' porównywana jest przestrzeń pamięci naszej aplikacji. A dokładniej sprawdzane jest czy wartość a i wartość b zapisane są w tym samym miejscu w pamięci naszej wirtualnej maszyny. Jeśli obie zmienne odwołują się do tego samego miejsca, wtedy wartość otrzymana będzie równa true. Jeśli natomiast wartości zmiennych będą identyczne, jednak zapisane w innych miejscach w pamięci - wtedy naszym wynikiem będzie false.  W przypadku metody equals()(przyjmijmy przykład dla zmiennej typu String) porównywana jest wartość (znak po znaku) zmiennej a i b. Niezależnie czy odwołują się one do tego samego miejsca w pamięci czy też nie (oraz przy założeniu że ich wartość jest identyczna) wynik wywołania metody equals() będzie równy true.",
+    "category": "Java SE"
+  },
+  {
+    "id": 99,
+    "question": "Co to są modyfikatory dostępu? Jakie znasz i jak działają?",
+    "answer": "Słowo kluczowe public jest modyfikatorem dostępu, który pozwala na najbardziej swobodny dostęp do elementu, który poprzedza. public może być używane przed definicjami klas, pól w klasach, metod czy typów wewnętrznych. Zakładając, że klasa poprzedzona jest public i element w tej klasie jest także public, jest on dostępny dla wszystkich, -Modyfikator protected ma znaczenie w przypadku dziedziczenia. Elementy poprzedzone tym modyfikatorem dostępu są udostępnione dla danej klasy i jej podklas. Dodatkowo elementy oznaczone modyfikatorem protected dostępne są dla innych klas w tym samym pakiecie. Modyfikatora protected nie można stosować przed klasami, Brak modyfikatora dostępu również ma znaczenie. W przypadku gdy pominiemy modyfikator dostępu wówczas dana klasa czy element jest dostępna wyłącznie wewnątrz tego samego pakietu, - Słowo kluczowe private jest najbardziej restrykcyjnym modyfikatorem dostępu. Może być stosowane wyłącznie przed elementami klasy, w tym przed klasami wewnętrznymi. Oznacza on tyle, że dany element (klasa, metoda, czy pole) widoczny jest tylko i wyłącznie wewnątrz klasy.",
+    "category": "Java SE"
+  },
+  {
+    "id": 100,
+    "question": " Za co odpowiada modyfikator static? Kiedy zostają wykonane operacje w bloku statycznym?",
+    "answer": "Dodanie modyfikatora static do metody sprawi że bedzie można wywołać daną metodę bez tworzenia obiektu klasy w której się znajduje. Metoda statyczna może \"dotykać\" tylko statycznych pól i wywoływać tylko statyczne metody w ramach klasy. Odwołania \"this\" i \"super\" nie mogą być wykorzystywane w ramach metody statycznej.",
+    "category": "Java SE"
+  },
+  {
+    "id": 101,
+    "question": "Co to jest rekurencja? Podaj przykład użycia.",
+    "answer": "ekurencja znana też jako rekursja to termin związany zarówno z matematyką jak i informatyką i w obu przypadkach ma podobne znaczenie - najłatwiej jest ją właśnie wytłumaczyć na najbardziej popularnych funkcjach matematycznych. Rekurencja jest to sytuacja, w której funkcja (czy też w naszym przypadku metoda) wywołuje samą siebie w celu rozwiązania pewnego problemu - stąd m.in. słynne już powiedzenie żeby zrozumieć rekurencję, trzeba zrozumieć rekurencję.",
+    "category": "Java SE"
+  },
+  {
+    "id": 102,
+    "question": "Metoda parallelStream?",
+    "answer": "Strumienie mogą być przetwarzane sekwencyjnie bądź równolegle. Metoda stream tworzy sekwencyjny strumień danych. Metoda parallelStream tworzy strumień, który jest uruchamiany jednocześnie na kilku wątkach. To ile wątków zostanie uruchomionych zależy od procesora.",
+    "category": "Java SE"
+  },
+  {
+    "id": 103,
+    "question": "Co to są strumienie?",
+    "answer": "Strumienie służą do przetwarzania danych. Zawierają dane i pozwalają na opisanie co chcesz zrobić tymi danymi.  Dane mogą być przechowywane w kolekcji, mogą być wynikiem pracy z wyrażeniami regularnymi. W strumień możesz opakować praktycznie dowolny zestaw danych. Strumienie pozwalają w łatwy sposób zrównoleglić pracę na danych. Dzięki temu przetwarzanie dużych zbiorów danych może być dużo szybsze. Strumienie kładą nacisk na operacje jakie należy przeprowadzić na danych. Strumienie to nie struktury danych, W odróżnieniu od struktur nie służą do przechowywania danych. Strumienie jedynie pomagają określić operacje, które na tych danych chcesz wykonać.",
+    "category": "Java SE"
+  },
+  {
+    "id": 104,
+    "question": "Co to są lambdy?",
+    "answer": "Dla uproszczenia można powiedzieć, że wyrażenie lambda jest metodą1. Metodą, którą możesz przypisać do zmiennej. Możesz ją także wywołać czy przekazać jako argument do innej metody.  Wyrażenia lambda możesz także porównać do klas anonimowych2. Mają one jednak dużo bardziej czytelną i zwięzłą składnię.  Na przykład wyrażenie lambda, które podnosi do kwadratu przekazaną liczbę wygląda następująco:  x -> x * x. Wyrażenia lambda są bardzo pomocne przy operacji na kolekcjach. Są niezastąpione także przy pracy ze strumieniami. Pozwalają także na pisanie w Javie w sposób “funkcyjny”5.  Oczywistą zaletą wyrażeń lambda jest ich zwięzłość. Kod zajmuje o wiele mniej miejsca, staje się przez to bardziej czytelny.",
+    "category": "Java SE"
+  },
+  {
+    "id": 105,
+    "question": "Co to jest enkapsulacja?",
+    "answer": "Enkapsulacja (inaczej hermetyzacja) to ukrywanie widoczności pól danej klasy dla innych klas, co w ten sposób chroni dane przechowywane w tych polach przed niepowołanym, lub co najmniej nieuzasadnionym dostępem.  Można zapytać - co nam w takim razie po polach, które nie są widoczne? Czy w ogóle ktoś może uzyskać do nich dostęp? Odpowiedź jest prosta. Można się do nich dostać, ale tylko za pozwoleniem klasy, w której te pola się znajdują. Tak więc musi ona udostępniać publiczne metody, które umożliwią wykonanie operacji na jej polach. Pola klasy muszą być poprzedzone modyfikatorem private (wtedy są niewidoczne dla innych klas).  W klasie muszą istnieć metody z modyfikatorem public, które umożliwią zmianę oraz odczyt wartości w polach (wtedy inne klasy mogą wykorzystać te metody).",
+    "category": "Java SE"
+  },
+  {
+    "id": 106,
+    "question": "Do czego służą interfejsy?",
+    "answer": "Interfejs w kontekście programowania w języku Java to zestaw metod bez ich implementacji (bez kodu definiującego zachowanie metody). Właściwa implementacja metod danego interfejsu znajduje się w klasie implementującej dany interfejs.",
+    "category": "Java SE"
+  },
+  {
+    "id": 107,
+    "question": "Kiedy warto używać dziedziczenia?",
+    "answer": "Dziedziczenie jest podobne do składania obiektów, należy je stosować wtedy gdy:  -chcemy używać obiektów klas pochodnych, dla których typ określać będzie klasa podstawowa (np. będziemy posługiwać się wskaźnikiem do obiektu typu klasy podstawowej)‏, -chcemy wprowadzić nową klasę, która częściowo modyfikuje zachowanie lub własności innej klasy, przy czym większość atrybutów i funkcji starej klasy pozostaje bez zmian (zwłaszcza jeśli chcemy pozostawić możliwość stosowania starej klasy), -nie spodziewamy się, aby obiekt klasy pochodnej miał kiedykolwiek w trakcie swojego istnienia dokonać zmiany atrybutów i zachowania związanych z klasą podstawową (w przeciwnym przypadku – gdy spodziewamy się wymiany składowych związanych z klasą podstawową na inne składowe – należy użyć bardziej elastycznej kompozycji obiektów)",
+    "category": "Java SE"
+  },
+  {
+    "id": 108,
+    "question": "Czy Java ma wielokrotne dziedziczenie klas/interfejsów?",
+    "answer": "W Javie jest to niemożliwe, to znaczy w definicji każdej klasy może wystąpić co najwyżej jedno słowo extends. Zamiast wielokrotnego dziedziczenia w Javie dostępny jest mechanizm interfejsów. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 109,
+    "question": "Co to jest i czym się różni override(przesłonięcie) od overload(przeciążenie)?",
+    "answer": "Przeciążenie(overloading) - Mamy z nim doczynia w chwili gdy wiele metod w klasie, posiada tą samą nazwę metody ale inną sygnaturę.   Przesłanianie(overriding) - Mamy z nim do czynienia gdy klasa bazowa jak i pochodna posiadają tą samą sygnaturę metody. W takim wypadku klasa pochodna swoją metodą \"przesłania\" metodę z klasy bazowej.",
+    "category": "Java SE"
+  },
+  {
+    "id": 110,
+    "question": "Jak działa HashMap?",
+    "answer": "HashMapa to struktura danych, która pozwala przechowywać dane typu klucz-wartości. W większości przypadków pozwala pobierać i dodawać je w stałym czasie O(1) oraz działa ona na bazie hashowania.  Kolizje w hashmapie - W sytuacja, kiedy dla dwóch obiektów klucza przy wywołaniu metody hashcode() zwracana jest ta sama wartość, mamy do czynienia z kolizją. Hashmapa dodatkowo wywołuje dla takich kluczy metodę equals(). Jeśli metoda equals() dla dwóch kluczy zwróci false, to znaczy, że są to dwa różne klucze. Wtedy mapa umieszcza dwie wartości w tym samym buckecie. Kolejne obiekty dla tych samych kluczy są umieszczane w LinkedList, co może prowadzić do degradacji wydajności – dlatego ważne jest, by dobrze zaimplementować metody hashcode() i equals(). Natomiast, jeśli metoda equals() zwróci true, to oznacza, że są to te same klucze i stara wartość jest zastępowana nową.",
+    "category": "Java SE"
+  },
+  {
+    "id": 111,
+    "question": "Co się stanie z HashMapą gdy źle zdefiniujemy metodę hashCode()?",
+    "answer": "Kolizje w hashmapie - W sytuacja, kiedy dla dwóch obiektów klucza przy wywołaniu metody hashcode() zwracana jest ta sama wartość, mamy do czynienia z kolizją. Hashmapa dodatkowo wywołuje dla takich kluczy metodę equals(). Jeśli metoda equals() dla dwóch kluczy zwróci false, to znaczy, że są to dwa różne klucze. Wtedy mapa umieszcza dwie wartości w tym samym buckecie. Kolejne obiekty dla tych samych kluczy są umieszczane w LinkedList, co może prowadzić do degradacji wydajności – dlatego ważne jest, by dobrze zaimplementować metody hashcode() i equals(). Natomiast, jeśli metoda equals() zwróci true, to oznacza, że są to te same klucze i stara wartość jest zastępowana nową.",
+    "category": "Java SE"
+  },
+  {
+    "id": 112,
+    "question": "Co to są wyjątki? Po co się ich używa?",
+    "answer": "Wyjątki w Javie to specjalne obiekty, które poza standardowymi operacjami na obiektach możemy także rzucać za pomocą słowa kluczowego throws, co powoduje natychmiastowe przerwanie działania wątku (w najprostszym przypadku — aplikacji) oraz przejście do pierwszego napotkanego miejsca, które ten wyjątek jest w stanie obsłużyć. Nieobsłużony wyjątek uśmierca bieżący wątek.  Aby wyjątek mógł być wyjątkiem, musi dziedziczyć po klasie Exception",
+    "category": "Java SE"
+  },
+  {
+    "id": 113,
+    "question": "Jakie znasz rodzaje wyjątków (hierarchia)?",
+    "answer": "NullPointerException — rzucany kiedy próbujesz wywołać metodę na zmiennej, której wartość to null IllegalArgumentException — rzucany, kiedy przekazywany argument jest z jakiegoś powodu nieprawidłowy (walidacja wewnątrz metod) IOException (wyjątki po nim dziedziczące) — rzucany w przypadku problemów z systemem wejścia/wyjścia, czyli najogólniej rzecz ujmując, kiedy wystąpi problem przy pracy z plikami lub z transmisją danych za pośrednictwem internetu NumberFormatException — rzucany, kiedy próbujemy zamienić na liczbę np. obiekt typu String, który zawiera nie tylko cyfry IndexOutOfBoundException — rzucany, kiedy próbujemy się odwołać do nieistniejącego elementu tablicy lub listy",
+    "category": "Java SE"
+  },
+  {
+    "id": 114,
+    "question": "Jakie znasz sposoby obsługi wyjątków?",
+    "answer": "Mozemy dpisac do metody throws, mozemy zastosowac blok try/catch, mozemy tez zastosowac instrukcje warunkowe if(",
+    "category": "Java SE"
+  },
+  {
+    "id": 115,
+    "question": "Omów konstrukcję try-catch-finally",
+    "answer": "Pierwsza sekcja — try — jest obowiązkowa. W niej należy umieścić kod, który chcemy ‘zabezpieczyć’ na wypadek wystąpienia wyjątku. Może to być jedna linijka lub wiele, ale warto starać się ograniczyć ilość linii wewnątrz tylko do tych najbardziej potrzebnych, inaczej kod stanie się mniej czytelny i nie będzie jasne, która jego część jest ‘niebezpieczna’.  Kolejne sekcje — catch oraz finally mogą wystąpić razem, ale wymagana jest tylko jedna z nich (dowolna). Możemy mieć więc tylko sekcje finally, tylko sekcje catch, a także sekcję catch i finally razem (wtedy wymagane jest, żeby sekcja catch była przed sekcją finally). Co więcej — możemy mieć kilka sekcji catch, aby inaczej obsługiwać różne wyjątki (ale o tym za chwilę).",
+    "category": "Java SE"
+  },
+  {
+    "id": 116,
+    "question": "Do czego służy konstrukcja try-with-resources?",
+    "answer": "Od wersji Java 1.7 dostępna jest nowa wersja instrukcji try..catch..finally nazywana try-with-resources (try z zasobami). Została ona wprowadzona dla wygody programistów, by zautomatyzować zamykanie różnego rodzaju zasobów takich jak obiekty klas odpowiedzialnych za np. odczytywanie danych z pliku. Aby nasz zasób mógł być używany z try-with-resources musi implementować interfejs AutoCloseable, czyli metodę close(). Teraz wiele klas i interfejsów z bibliotek Javy implementuje ten interfejs. Jest to poniekąd standard. Więc jeśli piszesz klasę, która reprezentuje zasób, który musi być zamknięty, to powinna implementować AutoCloseable. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 117,
+    "question": "Co się dzieje gdy wyjątek nie zostanie obsłużony?",
+    "answer": "Obiekt jest tworzony, JVM przechodzi przez stos wywołań (call stack) i sprawdza kolejno w każdej metodzie czy dana klasa wyjątku jest łapana w bloku catch (exception handler). Jeśli dotrze aż do metody main to uruchomi się default exception handler, który drukuje do konsoli opis wyjątku, stack trace i działanie programu zostaje nagle przerwane. Dlatego, żeby wyjątek obsłużyć, musimy posłużyć się mechanizmem try-catch-finally. Przy try możemy dopisać dowolną liczbę bloków catch – od najbardziej szczegółowego do najmniej (dlatego, że gdy wyjątek zostanie złapany w jednym z bloków, program nie dotrze już do kolejnych).  Jeśli nie chcemy w danej metodzie wyjątku bezpośrednio obsługiwać (a jest on checked), trzeba do deklaracji metody dopisać keyword throws i klasę wyjątku występującego w jej wnętrzu.  ",
+    "category": "Java SE"
+  },
+  {
+    "id": 118,
+    "question": "Co to jest NullPointerException? Kiedy występuje?",
+    "answer": "NullPointerException jest wyjątkiem z grupy wyjątków nieobsługiwanych(unchecked exception), co oznacza, że nie ma obowiązku jego obsługi w miejscach, w których może wystąpić. Wyjątek dziedziczy po klasie RuntimeException i znajduje się w pakiecie java.lang więc pełna ścieżka do klasy to java.lang.NullPointerException.  Konsekwencją tego faktu jest to, że szczególnie młodym programistom sprawia on wiele trudności i bywa ciężki do wykrycia. Ogólnym powodem występowania wyjątku NullPointerException jest próba odwołania się do pola obiektu lub metody poprzez niezainicjowaną zmienną.",
+    "category": "Java SE"
+  },
+  {
+    "id": 119,
+    "question": "Co to są wątki?",
+    "answer": "Wątki pozwalają na jednoczesne wykonywanie pewnych operacji dzięki czemu czas wykonania pewnych operacji można znacząco skrócić.  Wątki w Javie można tworzyć na kilka sposobów, poprzez:  jawne rozszerzenie klasy Thread, -stworzenie klasy implementującej interfejs Runnable, który może być wykonany w osobnym wątku (Thread), -stworzenie klasy implementującej interfejs Callable, który może być wykonany w osobnym wątku (Thread). To co istotne to fakt, że zastosowanie wątków sprawdza się nawet na procesorze, który posiada tylko jeden rdzeń. Jest to spowodowane tym, że każdy z wątków może otrzymywać swój czas procesora na wykonanie pewnych operacji.",
+    "category": "Java SE"
+  },
+  {
+    "id": 120,
+    "question": "Omów różnicę między concurrency (współbieżność) a parallelism(równoległość).",
+    "answer": "Przetwarzanie równoległe (parallelism) – proces równoczesnego wykonywania operacji (nacisk na równoczesność). Współbieżność (concurrency) – zdolność do obsługi wielu zapytań jednocześnie (nacisk na komunikację).",
+    "category": "Java SE"
+  },
+  {
+    "id": 121,
+    "question": "Jakie znasz sposoby tworzenia wątków?",
+    "answer": "Wątki w Javie można tworzyć na kilka sposobów, poprzez:  jawne rozszerzenie klasy Thread stworzenie klasy implementującej interfejs Runnable, który może być wykonany w osobnym wątku (Thread) stworzenie klasy implementującej interfejs Callable, który może być wykonany w osobnym wątku (Thread)",
+    "category": "Java SE"
+  },
+  {
+    "id": 122,
+    "question": "Do czego służy synchronizacja? Jak jej użyć?",
+    "answer": "Synchronizacja jest mechanizmem, który zapewnia, że kilka wykonujących się wątków nie będzie równocześnie wykonywać tego samego kodu, w szczególności - działać na tym samym obiekcie. Synchronizacje jest potrzebna po to, by współdzielenie zasobu przez kilka wątków nie prowadziło do niespójnych stanów zasobu.  Służy do tego słowo kluczowe synchronized.  Mamy blok synchronized public void increment() {         synchronized (this) {             value += 1;         }     } oraz metody synchonized  ublic synchronized void increment() {     value += 1; } ",
+    "category": "Java SE"
+  },
+  {
+    "id": 123,
+    "question": "Różnica między wait() a sleep()?",
+    "answer": "sleep() - każe czekać określoną ilość czasu np. sleep(2000);  wait() - Każe czekać maksymalnie do określonego czasu np. wait(2000)   Różnica jest taka iż wait może zostać przerwane np. poprzez notifyAll();   Sleep użyłbym np. gdybym kazał budzikowi zadzwonić za minutę.  wait użyłbym gdybym kazał danemu wątkowi czekać, aż inny wątek skończy swoje operacje",
+    "category": "Java SE"
+  },
+  {
+    "id": 124,
+    "question": "Co oznacza modyfikator volatile?",
+    "answer": "Modyfikator volatile wymusza na wątku (thread) sprawdzanie zgodności jego wersji (kopii) zmiennej z oryginałem.",
+    "category": "Java SE"
+  },
+  {
+    "id": 125,
+    "question": "Co to jest deadlock(zakleszczenie)?",
+    "answer": "Zakleszczenie (deadlock) – występuję gdy wątek A czeka aż wątek B skończy swoją operację a wątek B czeka aż wątek A zakończy akcję. W takiej sytuacji oczywiście algorytm nigdy nie skończy operacji, ponieważ wątki czekają na siebie nawzajem.",
+    "category": "Java SE"
+  },
+  {
+    "id": 126,
+    "question": "Co to są wzorce projektowe?",
+    "answer": "Wzorce projektowe (design patterns) to typowe rozwiązania problemów często napotykanych podczas projektowania oprogramowania. Każdy z nich stanowi plan, który po odpowiednim dostosowaniu pomaga poradzić sobie z konkretnym problemem w projekcie twojego kodu.",
+    "category": "Java SE"
+  },
+  {
+    "id": 127,
+    "question": "Jakie znasz wzorce projektowe?",
+    "answer": "Fasada Wzorzec fasady polega na tym, że tworzymy klasę, której jedynym zadaniem jest wywoływanie odpowiednich metod z innych klas (np. serwisów) czasem w odpowiedniej kolejności lub dodając/modyfikując pewne informacje. np. serwis wywoluje metody z repository. Wzorzec: Fabryka Wzorzec fabryka (ang. factory method) to metoda, która tworzy nam nowy obiekt. Powodów, dla których chcemy tak zrobić może być wiele — najczęściej jako typ zwracany deklarujemy interfejs, a metoda zawiera logikę która decyduje jakiego typu obiekt utworzyć: public Zwierze rozpoznajZwierzaka(String dzwiek) { if (dzwiek.equals(\"hau\")) { return new Pies(); } else { return new Kot(); } }   (Anty)wzorzec: Singleton, zapewnia nam sytuacje w ktorej bedziemy posiadali tylko jedna instancje danego obiektu w naszej aplikacji. Problem z takim podejściem jest związany z tym, że większość współczesnych aplikacji jest wielowątkowa (np. aplikacje webowe — dzieje się to często zupełnie bez naszej wiedzy) i rozproszona, tego rodzaju implementacja to prosty przepis na katastrofę w kwestii wydajności. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 128,
+    "question": "Co to jest Singleton? Jak go utworzyć? Czemu jest nazywany antywzorcem?",
+    "answer": "(Anty)wzorzec: Singleton, zapewnia nam sytuacje w ktorej bedziemy posiadali tylko jedna instancje danego obiektu w naszej aplikacji. Problem z takim podejściem jest związany z tym, że większość współczesnych aplikacji jest wielowątkowa (np. aplikacje webowe — dzieje się to często zupełnie bez naszej wiedzy) i rozproszona, tego rodzaju implementacja to prosty przepis na katastrofę w kwestii wydajności. ",
+    "category": "Java SE"
+  },
+  {
+    "id": 129,
+    "question": "Co to jest lazy singleton?",
+    "answer": "Dzięki implementacji leniwego tworzenia obiektu można odwlec w czasie moment budowania instancji oraz potencjalnie oszczędzić zasoby, jeżeli nie będzie wcale potrzeby jego utworzenia. Można to zrobić w prosty sposób:",
+    "category": "Java SE"
+  },
+  {
+    "id": 130,
+    "question": "Omów wzorzec \"Strategia\"",
+    "answer": " Jak zaimplementować? Zidentyfikuj kontekst czyli klasę w której znajduje się kod z dużą ilością instrukcji warunkowych. Określ zachowanie które jest wspólne dla tworzonej strategii. Utwórz interfejs strategii. Będzie on reprezentować to zachowanie. Zaimplementuj w klasach konkretne wersje algorytmu. Każda klasa będzie implementować zdefiniowany wcześniej interfejs. Zmień główną klasę tak by mogła współpracować ze strategią.",
+    "category": "Java SE"
+  },
+  {
+    "id": 131,
+    "question": "Omów wzorzec \"Dekorator\". Gdzie występuje w Javie SE?",
+    "answer": "Dekorator – wzorzec projektowy należący do grupy wzorców strukturalnych. Pozwala na dodanie nowej funkcji do istniejących klas dynamicznie podczas działania programu.  Wzorzec dekoratora polega na opakowaniu oryginalnej klasy w nową klasę „dekorującą”. Zwykle przekazuje się oryginalny obiekt jako parametr konstruktora dekoratora, metody dekoratora wywołują metody oryginalnego obiektu i dodatkowo implementują nową funkcję. W przypadku języka Java wzorzec projektowy dekorator jest dość często używany w bibliotece standardowej. Za przykład mogą tu posłużyć strumienie wykorzystywane przy operacjach na plikach. InputStream jest klasą abstrakcyjną, która posiada wiele dekoratorów, na przykład FileInputStream czy BufferedInputStream.  Innym przykładem, również z języka Java, mogą być dekoratory kolekcji. Dekoratory te na przykład pozwalają na utworzenie kolekcji, która jest synchronizowana czy niemodyfikowalna. Collections zawiera szereg metod zaczynających się od synchronized albo unmodifiable, które tworzą instancje dekoratorów.",
+    "category": "Java SE"
+  },
+  {
+    "id": 133,
+    "question": "Rozwiń i omów akronim SOLID",
+    "answer": "SOLID - Zasada pojedynczej odpowiedzialności (ang. Single-Responsibility Principle – SRP), -Zasada otwarte – zamknięte (ang. Open/Closed Principle – OCP), - Zasada podstawiania Liskov (ang. Liskov Substitution Principle – LSP), -Zasada segregacji interfejsów (ang. Interface Segregation Principle – ISP), -Zasada odwracania zależności (ang. Dependency Inversion Principle – DIP).",
+    "category": "Java SE"
+  },
+  {
+    "id": 134,
+    "question": "Dobre praktyki programowania",
+    "answer": "Dobre praktyki Bez tego się nie obejdzie. Jeśli chcesz tworzyć kod, który będzie łatwy w utrzymaniu, możliwy do rozszerzenia i testowania stosuj dobre praktyki opracowane przez bardziej doświadczonych programistów. Ta lista zawiera artykuły, które opisują takie praktyki.  Zasady SOLID Reguły DRY, KISS i YAGNI Porównanie DIP, IOC i DI W niektórych sytuacjach rysunki pokazujące system/rozwiązanie problemu. Właśnie wtedy może Ci się przydać znajomość podstaw UML.",
+    "category": "Java SE"
+  },
+  {
+    "id": 135,
+    "question": "Rozwiń i omów akronim KISS",
+    "answer": "Keep It Simple, Silly (dosłownie Nie Komplikuj, Głuptasku).  Zasada polega na stosowaniu najprostrzych mozliwych rozwiazan. Ułatwia to również pracę w zespołach programistów, gdzie wykorzystanie najprostszej wersji działającego kodu ułatwia jego zrozumienie przez osoby inne, niż jego twórca.",
+    "category": "Java SE"
+  },
+  {
+    "id": 136,
+    "question": "Rozwiń i omów akronim DRY",
+    "answer": "Don’t Repeat Yourself, czyli po prostu – Nie Powtarzaj Się.  Chodzi mu o to, abyśmy tworzyli kod, który pozwala uniknąć niepotrzebnych powtórzeń w kodzie, kodu, który robi to samo i się powtarza. Idąc dalej, chodzi o to aby żadna część naszej aplikacji nie powtarzała się w wielu miejscach a znajdowała się tylko w miejscu, które jest dla danej funkcjonalności przeznaczone.",
+    "category": "Java SE"
+  },
+  {
+    "id": 137,
+    "question": "Co to jest \"prawo Demeter\"?",
+    "answer": "Law of Demeter (LoD)  zasada projektowania oprogramowania (w szczególności projektowania w językach obiektowych), która w skrócony i nieco nieformalny sposób jest ujmowana: „rozmawiaj tylko z (bliskimi) przyjaciółmi”.  W pełnej formie mówi ono, iż metoda danego obiektu może odwoływać się jedynie do metod należących do:  tego samego obiektu, dowolnego parametru przekazanego do niej, dowolnego obiektu przez nią stworzonego, dowolnego składnika klasy, do której należy dana metoda. Stosowanie prawa Demeter prowadzi do zmniejszenia zależności. Kod wywołujący daną metodę nie musi znać struktury obiektu, na rzecz którego wywołuje ją. Nie musi również wiedzieć jaki faktycznie obiekt realizuje daną operację. Dzięki temu zmiany tej struktury nie wymagają zmian klienta używającego tej metody.  Zwiększa się zatem łatwość utrzymania kodu.",
+    "category": "Java SE"
+  }
+]
