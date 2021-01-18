@@ -1,12 +1,15 @@
 package pl.jjd.jjd.service;
 
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import pl.jjd.jjd.dto.QuestionDto;
 import pl.jjd.jjd.entity.Question;
 import pl.jjd.jjd.exception.NotFoundException;
 import pl.jjd.jjd.reposiotry.QuestionRepository;
 
+import javax.transaction.Transactional;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -74,6 +77,10 @@ public class QuestionService {
             return found;
         }
         return null;
+    }
+    @Transactional
+    public Page <QuestionDto> findAll(Pageable pageable){
+        return questionRepository.findAll(pageable).map(entity -> new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory()));
     }
 
 }
