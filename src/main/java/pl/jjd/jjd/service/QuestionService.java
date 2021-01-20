@@ -27,7 +27,7 @@ public class QuestionService {
         return new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory());
     }
 
-    public List<QuestionDto> findAll() {
+    public List<QuestionDto> findAllWithPagination() {
         List<Question> questionList = (List<Question>) questionRepository.findAll();
         return questionList.stream().map(entity -> new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory())).collect(Collectors.toList());
     }
@@ -69,7 +69,7 @@ public class QuestionService {
     public List<QuestionDto> searchForQuestion(String chars) {
         if (chars != null || !chars.isBlank()) {
             List<QuestionDto> found = new ArrayList<>();
-            for (QuestionDto foundQuestion : findAll()) {
+            for (QuestionDto foundQuestion : findAllWithPagination()) {
                 if (foundQuestion.getQuestion().toLowerCase().contains(chars.toLowerCase())) {
                     found.add(foundQuestion);
                 }
@@ -79,7 +79,7 @@ public class QuestionService {
         return null;
     }
     @Transactional
-    public Page <QuestionDto> findAll(Pageable pageable){
+    public Page <QuestionDto> findAllWithPagination(Pageable pageable){
         return questionRepository.findAll(pageable).map(entity -> new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory()));
     }
 

@@ -20,7 +20,7 @@ public class QuestionController {
 
     @GetMapping("/questions/list")
     public Iterable<QuestionDto> questions() {
-        return questionService.findAll();
+        return questionService.findAllWithPagination();
     }
 
     @PostMapping

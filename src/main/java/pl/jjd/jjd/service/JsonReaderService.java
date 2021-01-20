@@ -20,7 +20,7 @@ public class JsonReaderService {
     }
 
     public List<QuestionDto> exportJson() throws IOException {
-        List<QuestionDto> questionDtoList = questionService.findAll();
+        List<QuestionDto> questionDtoList = questionService.findAllWithPagination();
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writeValue(Paths.get("src/main/resources/json/backup "+nameFileBuilder()+".json").toFile(), questionDtoList);
         return questionDtoList;
