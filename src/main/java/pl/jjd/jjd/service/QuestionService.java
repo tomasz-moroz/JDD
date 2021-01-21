@@ -2,6 +2,7 @@ package pl.jjd.jjd.service;
 
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import pl.jjd.jjd.dto.QuestionDto;
@@ -78,8 +79,9 @@ public class QuestionService {
         }
         return null;
     }
-    @Transactional
-    public Page <QuestionDto> findAllWithPagination(Pageable pageable){
+
+    public Page <QuestionDto> findAllWithPagination(int page, int pageSize){
+        Pageable pageable = PageRequest.of(page, pageSize);
         return questionRepository.findAll(pageable).map(entity -> new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory()));
     }
 

@@ -31,6 +31,9 @@
                 <td>${question.getCategory()}</td>
                 <td>${question.getQuestion()}</td>
                 <td>${question.getAnswer()}</td>
+                <td> <a href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-primary">Update</a>
+                    <a href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Delete</a>
+                </td>
             </tr>
         </#list>
         </tbody>
@@ -42,32 +45,35 @@
                 <div class="col-sm-2">
                     Ilosc stron: ${totalPages}
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-2">
+                    <#if (page > 0)>
+                        <a href="${page-1}"> Poprzednia strona</a>
+                    <#else >
+                        <span>Poprzednia strona</span>
+                    </#if>
+                </div>
+                <div class="col-sm-2">
                     <span>
                         <#list listOfNumbers>
                             <#items as pages>
                             <#if page != pages>
-                                <a href="'/page/'+${page}"> ${page}</a>
-                                <span>${page}</span>
+                                <a href="${pages}"> ${pages}</a>
+                                <#else >
+                                <span>${pages}</span>
                             </#if>
                             </#items>
                         </#list>
                     </span>
                 </div>
-                <div class="col-sm-1">
+
+                <div class="col-sm-2">
                     <#if (page < totalPages)>
-                        <a href="'/page/'+${page+1}"> Next</a>
+                        <a href="${page+1}"> Nastepna strona</a>
                     <#else >
-                        <span>Next</span>
+                        <span>Nastepna strona</span>
                     </#if>
                 </div>
-                <div class="col-sm-1">
-                    <#if (page < totalPages)>
-                        <a href="'/page/'+${totalPages}"> Last</a>
-                    <#else >
-                        <span>Last</span>
-                    </#if>
-                </div>
+
             </div>
         </#if>
     </div>

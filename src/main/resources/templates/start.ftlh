@@ -18,7 +18,7 @@
         <a href="/addQuestion">Dodaj pytanie</a>
         <a href="/readJson">Wczytaj plik JSON</a>
         <a href="/exportJson">Zapisz pytania do pliku JSON</a>
-        <a href="/viewQuestions">Przegladaj pytania</a>
+        <a href="/viewQuestions/0">Przegladaj pytania</a>
       </nav>
 
     </header>
