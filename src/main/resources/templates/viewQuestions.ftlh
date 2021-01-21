@@ -16,6 +16,7 @@
     <h1>Lista Pytan</h1>
 
     <a href="/addQuestion" class="btn btn-primary btn-sm mb-3"> Dodaj Pytanie </a>
+    <a href="/start" class="btn btn-primary btn-sm mb-3"> Przejdz do strony glownej </a>
 
     <table border="1" class="table table-striped table-responsive-md">
         <thead>
@@ -23,6 +24,7 @@
             <th>Kategoria</th>
             <th>Pytanie</th>
             <th>Odpowiedz</th>
+            <th> Edycja </th>
         </tr>
         </thead>
         <tbody>
@@ -31,8 +33,8 @@
                 <td>${question.getCategory()}</td>
                 <td>${question.getQuestion()}</td>
                 <td>${question.getAnswer()}</td>
-                <td> <a href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-primary">Update</a>
-                    <a href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Delete</a>
+                <td><a href="/showFormForUpdate/${question.getId()}" class="btn btn-primary">Update</a>
+                    <a href="/deleteQuestion/${question.getId()}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         </#list>
@@ -56,11 +58,11 @@
                     <span>
                         <#list listOfNumbers>
                             <#items as pages>
-                            <#if page != pages>
-                                <a href="${pages}"> ${pages}</a>
+                                <#if page != pages>
+                                    <a href="${pages}"> ${pages}</a>
                                 <#else >
-                                <span>${pages}</span>
-                            </#if>
+                                    <span>${pages}</span>
+                                </#if>
                             </#items>
                         </#list>
                     </span>
@@ -75,10 +77,10 @@
                 </div>
 
             </div>
+        <#else >
+            <a>-</a>
         </#if>
     </div>
-
-
 </div>
 </body>
 </html>
