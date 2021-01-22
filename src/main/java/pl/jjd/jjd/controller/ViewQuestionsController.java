@@ -33,7 +33,7 @@ public class ViewQuestionsController {
         List<QuestionDto> questionDtoList = questionDtoPage.getContent();
         int totalPages = questionDtoPage.getTotalPages();
         long totalItems = questionDtoPage.getTotalElements();
-        List<Integer> numberOfPages = IntStream.rangeClosed(1, totalPages)
+        List<Integer> numberOfPages = IntStream.rangeClosed(0, totalPages-1)
                 .boxed().collect(Collectors.toList());
 
         model.addAttribute("questionList", questionDtoList);

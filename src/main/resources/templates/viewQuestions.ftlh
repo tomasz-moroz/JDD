@@ -59,9 +59,9 @@
                         <#list listOfNumbers>
                             <#items as pages>
                                 <#if page != pages>
-                                    <a href="${pages}"> ${pages}</a>
+                                    <a href="${pages}"> ${pages+1}</a>
                                 <#else >
-                                    <span>${pages}</span>
+                                    <span>${pages+1}</span>
                                 </#if>
                             </#items>
                         </#list>
