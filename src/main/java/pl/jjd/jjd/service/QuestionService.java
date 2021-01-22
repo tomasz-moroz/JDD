@@ -4,13 +4,13 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import pl.jjd.jjd.dto.QuestionDto;
 import pl.jjd.jjd.entity.Question;
 import pl.jjd.jjd.exception.NotFoundException;
 import pl.jjd.jjd.reposiotry.QuestionRepository;
 
-import javax.transaction.Transactional;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -28,7 +28,7 @@ public class QuestionService {
         return new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory());
     }
 
-    public List<QuestionDto> findAllWithPagination() {
+    public List<QuestionDto> findAllWithPaginationAndSorting() {
         List<Question> questionList = (List<Question>) questionRepository.findAll();
         return questionList.stream().map(entity -> new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory())).collect(Collectors.toList());
     }
@@ -70,7 +70,7 @@ public class QuestionService {
     public List<QuestionDto> searchForQuestion(String chars) {
         if (chars != null || !chars.isBlank()) {
             List<QuestionDto> found = new ArrayList<>();
-            for (QuestionDto foundQuestion : findAllWithPagination()) {
+            for (QuestionDto foundQuestion : findAllWithPaginationAndSorting()) {
                 if (foundQuestion.getQuestion().toLowerCase().contains(chars.toLowerCase())) {
                     found.add(foundQuestion);
                 }
@@ -80,8 +80,9 @@ public class QuestionService {
         return null;
     }
 
-    public Page <QuestionDto> findAllWithPagination(int page, int pageSize){
-        Pageable pageable = PageRequest.of(page, pageSize);
+    public Page <QuestionDto> findAllWithPaginationAndSorting(int page, int pageSize, String sortField, String sortDirection){
+        Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending() : Sort.by(sortField).descending();
+        Pageable pageable = PageRequest.of(page, pageSize, sort);
         return questionRepository.findAll(pageable).map(entity -> new QuestionDto(entity.getId(), entity.getQuestion(), entity.getAnswer(), entity.getCategory()));
     }
 

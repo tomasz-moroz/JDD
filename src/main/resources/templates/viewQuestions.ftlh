@@ -21,7 +21,9 @@
     <table border="1" class="table table-striped table-responsive-md">
         <thead>
         <tr>
-            <th>Kategoria</th>
+            <th>
+                <a href="${page}?sortField=category&sortDir=${reverseSortDir}">Kategoria</a>
+            </th>
             <th>Pytanie</th>
             <th>Odpowiedz</th>
             <th> Edycja </th>
@@ -49,7 +51,7 @@
                 </div>
                 <div class="col-sm-2">
                     <#if (page > 0)>
-                        <a href="${page-1}"> Poprzednia strona</a>
+                        <a href="${page-1}?sortField=category&sortDir=${reverseSortDir}"> Poprzednia strona</a>
                     <#else >
                         <span>Poprzednia strona</span>
                     </#if>
@@ -59,7 +61,7 @@
                         <#list listOfNumbers>
                             <#items as pages>
                                 <#if page != pages>
-                                    <a href="${pages}"> ${pages+1}</a>
+                                    <a href="${pages}?sortField=category&sortDir=${reverseSortDir}"> ${pages+1}</a>
                                 <#else >
                                     <span>${pages+1}</span>
                                 </#if>
@@ -70,7 +72,7 @@
 
                 <div class="col-sm-2">
                     <#if (page < totalPages)>
-                        <a href="${page+1}"> Nastepna strona</a>
+                        <a href="${page+1}?sortField=category&sortDir=${reverseSortDir}"> Nastepna strona</a>
                     <#else >
                         <span>Nastepna strona</span>
                     </#if>

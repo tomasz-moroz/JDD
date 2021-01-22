@@ -16,7 +16,7 @@ public class LuckyShotService {
     }
 
     public QuestionDto findRandomQuestion() {
-        List<QuestionDto> questionList = questionService.findAllWithPagination();
+        List<QuestionDto> questionList = questionService.findAllWithPaginationAndSorting();
         Random random = new Random();
         QuestionDto randomQuestion = questionList.get(random.nextInt(questionList .size()));
         return randomQuestion;

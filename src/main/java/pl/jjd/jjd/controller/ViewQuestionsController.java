@@ -4,10 +4,7 @@ import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import pl.jjd.jjd.dto.QuestionDto;
 import pl.jjd.jjd.service.QuestionService;
 
@@ -27,9 +24,12 @@ public class ViewQuestionsController {
 
     @GetMapping
     @RequestMapping(path = "/viewQuestions/{page}")
-    public String findPaginated(@PathVariable(value = "page") int page, Model model) {
+    public String findPaginated(@PathVariable(value = "page") int page,
+                                @RequestParam("sortField") String sortField,
+                                @RequestParam("sortDir") String sortDir,
+                                Model model) {
         int pageSize = 25;
-        Page<QuestionDto> questionDtoPage = questionService.findAllWithPagination(page, pageSize);
+        Page<QuestionDto> questionDtoPage = questionService.findAllWithPaginationAndSorting(page, pageSize, sortField, sortDir);
         List<QuestionDto> questionDtoList = questionDtoPage.getContent();
         int totalPages = questionDtoPage.getTotalPages();
         long totalItems = questionDtoPage.getTotalElements();
@@ -41,12 +41,16 @@ public class ViewQuestionsController {
         model.addAttribute("totalPages", totalPages);
         model.addAttribute("totalItems", totalItems);
         model.addAttribute("listOfNumbers", numberOfPages);
+
+        model.addAttribute("sortField", sortField);
+        model.addAttribute("sortDir", sortDir);
+        model.addAttribute("reverseSortDir", sortDir.equals("asc")?"desc":"asc");
         return "viewQuestions";
     }
 
     @GetMapping(path = "/viewQuestions/")
     public String viewListOfQuestions(Model model) {
-        return findPaginated(1, model);
+        return findPaginated(1, "category", "asc", model);
     }
 
     @GetMapping(path = "/deleteQuestion/{id}")
