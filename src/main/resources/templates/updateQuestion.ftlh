@@ -6,7 +6,7 @@
 </head>
 <body>Edytuj pytanie:</br></br>
 
-<form action="/showFormForUpdate/{id}" method="post">
+<form action="/showFormForUpdate/${id}/edit" method="post">
 
     <label > Pytanie: <input type="text" name="question" required style="width: 1000px"> </label></br></br>
     <label> Odpowiedz: <input type="text" name="answer" required style="width: 1000px"> </label></br></br>

@@ -48,16 +48,20 @@ public class ViewQuestionsController {
     public String viewListOfQuestions(Model model) {
         return findPaginated(1, model);
     }
+
     @GetMapping(path = "/deleteQuestion/{id}")
     public String deleteQuestion(@PathVariable(value = "id") long id) {
         questionService.delete(id);
         return "redirect:/viewQuestions/0";
     }
 
+    @RequestMapping(path = "/showFormForUpdate/{id}")
+    public String edit(@PathVariable(value = "id") long id, Model model, QuestionDto questionDto) throws ChangeSetPersister.NotFoundException {
+        updateQuestion(id, model, questionDto);
+        return "updateQuestion";
+    }
 
-
-
-    @PostMapping(path = "/showFormForUpdate/{id}")
+    @PostMapping(path = "/showFormForUpdate/{id}/edit")
     public String updateQuestion(@PathVariable(value = "id") long id, Model model, QuestionDto questionDto) throws ChangeSetPersister.NotFoundException {
         model.addAttribute("question", questionDto.getQuestion());
         model.addAttribute("answer", questionDto.getQuestion());
