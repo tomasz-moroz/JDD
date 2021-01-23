@@ -56,7 +56,7 @@ public class ViewQuestionsController {
     @GetMapping(path = "/deleteQuestion/{id}")
     public String deleteQuestion(@PathVariable(value = "id") long id) {
         questionService.delete(id);
-        return "redirect:/viewQuestions/0";
+        return "redirect:/viewQuestions/0?sortField=category&sortDir=desc";
     }
 
     @RequestMapping(path = "/showFormForUpdate/{id}")
@@ -71,7 +71,7 @@ public class ViewQuestionsController {
         model.addAttribute("answer", questionDto.getQuestion());
         model.addAttribute("category", questionDto.getCategory());
         questionService.edit(id,questionDto);
-        return "redirect:/viewQuestions/0";
+        return "redirect:/viewQuestions/0?sortField=category&sortDir=desc";
     }
 
 }

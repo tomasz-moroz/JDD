@@ -28,7 +28,7 @@
         <option value="Scrum">Scrum</option>
     </select></br></br>
 
-    <input type="submit" name="update" value="update">
+    <input type="submit" name="update" value="update" >
 </form>
 <a href="/start">Powrot</a>
 </body>
