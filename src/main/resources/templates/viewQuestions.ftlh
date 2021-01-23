@@ -32,10 +32,23 @@
         <tbody>
         <#list questionList as question>
             <tr>
-                <td>${question.getCategory()}</td>
-                <td>${question.getQuestion()}</td>
-                <td>${question.getAnswer()}</td>
-                <td><a href="/showFormForUpdate/${question.getId()}" class="btn btn-primary">Update</a>
+
+                <td><#if question.getCategory()??>
+                        ${question.getCategory()} </p>
+                    <#else >
+                    Category not found</#if></td>
+
+                <td><#if question.getQuestion()??>
+                        ${question.getQuestion()} </p>
+                    <#else >
+                    Question not found</#if></td>
+
+                <td><#if question.getAnswer()??>
+                        ${question.getAnswer()} </p>
+                    <#else >
+                    Answer not found</#if></td>
+
+                <td><a href="/showFormForUpdate/${question.getId()}" class="btn btn-primary">Update</a></br></br>
                     <a href="/deleteQuestion/${question.getId()}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
