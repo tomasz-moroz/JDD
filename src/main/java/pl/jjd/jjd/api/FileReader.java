@@ -25,7 +25,7 @@ public class FileReader {
         TypeReference<QuestionsApi> typeReference = new TypeReference<QuestionsApi>() {};
         InputStream inputStream = TypeReference.class.getResourceAsStream("/json/1.json");
         List<QuestionsApi> questionsApi = (List<QuestionsApi>) objectMapper.readValue(inputStream, typeReference);
-        System.out.println("Meals saved");
+        System.out.println("Questions saved");
         return questionsApi;
     }
     public List<Question> read() throws IOException {

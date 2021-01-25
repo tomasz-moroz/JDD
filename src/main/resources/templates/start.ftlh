@@ -16,8 +16,8 @@
         <a href="/luckyShot">Losowe pytanie</a>
         <a href="/categories">Przegladaj kategorie</a>
         <a href="/addQuestion">Dodaj pytanie</a>
-        <a href="/readJson">Wczytaj plik JSON</a>
-        <a href="/exportJson">Zapisz pytania do pliku JSON</a>
+        <a href="/read">Wczytaj plik JSON</a>
+        <a href="/export">Zapisz pytania do pliku JSON</a>
         <a href="/viewQuestions/0?sortField=category&sortDir=desc">Przegladaj pytania</a>
       </nav>
 

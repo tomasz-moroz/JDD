@@ -1,11 +1,17 @@
 package pl.jjd.jjd.service;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import pl.jjd.jjd.api.QuestionMapper;
+import pl.jjd.jjd.api.QuestionsApi;
 import pl.jjd.jjd.dto.QuestionDto;
+import pl.jjd.jjd.entity.Question;
 
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.util.*;
@@ -19,10 +25,31 @@ public class JsonReaderService {
         this.questionService = questionService;
     }
 
+
+    /*IMPORT*/
+
+    public List<QuestionsApi>  readerFromFile(MultipartFile file) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        TypeReference<QuestionsApi> typeReference = new TypeReference<QuestionsApi>() {};
+        InputStream inputStream = TypeReference.class.getResourceAsStream(file.getName());
+        List<QuestionsApi> questionsApi = (List<QuestionsApi>) objectMapper.readValue(inputStream, typeReference);
+        System.out.println("Questions saved");
+        return questionsApi;
+    }
+    public List<Question> read(MultipartFile file) throws IOException {
+        List<QuestionsApi> questionsApiList = readerFromFile(file);
+        QuestionMapper questionMapper = new QuestionMapper();
+        List<Question>questionList = questionMapper.mapQuestionsFromJsonFile(questionsApiList);
+        questionService.saveQuestionList(questionList);
+        return questionList;
+    }
+
+    /*EXPORT*/
+
     public List<QuestionDto> exportJson() throws IOException {
         List<QuestionDto> questionDtoList = questionService.findAllWithPaginationAndSorting();
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.writeValue(Paths.get("src/main/resources/json/backup "+nameFileBuilder()+".json").toFile(), questionDtoList);
+        objectMapper.writeValue(Paths.get("/home/tmo/Desktop/JDD/src/main/resources/json/backup/"+nameFileBuilder()+".json").toFile(), questionDtoList);
         return questionDtoList;
     }
 

@@ -67,6 +67,12 @@ public class ViewQuestionsController {
 
     @PostMapping(path = "/showFormForUpdate/{id}/edit")
     public String updateQuestion(@PathVariable(value = "id") long id, Model model, QuestionDto questionDto) throws ChangeSetPersister.NotFoundException {
+
+        QuestionDto earlierQuestion = questionService.findById(id);
+        model.addAttribute("earlierQuestion", earlierQuestion.getQuestion());
+        model.addAttribute("earlierAnswer", earlierQuestion.getAnswer());
+        model.addAttribute("earlierCategory", earlierQuestion.getCategory());
+
         model.addAttribute("question", questionDto.getQuestion());
         model.addAttribute("answer", questionDto.getQuestion());
         model.addAttribute("category", questionDto.getCategory());

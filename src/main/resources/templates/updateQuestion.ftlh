@@ -8,12 +8,12 @@
 
 <form action="/showFormForUpdate/${id}/edit" method="post">
 
-    <label > Pytanie: <input type="text" name="question" required style="width: 1000px"> </label></br></br>
-    <label> Odpowiedz: <input type="text" name="answer" required style="width: 1000px"> </label></br></br>
+    <label > Pytanie: <input type="text" name="question" placeholder="${earlierQuestion}" required style="width: 1000px"> </label></br></br>
+    <label> Odpowiedz: <input type="text" name="answer" placeholder="${earlierAnswer}" required style="width: 1000px"> </label></br></br>
 
     <label for="category">Kategoria</label>
     <select type="text" name="category" required style="margin-left: auto; margin-right: auto">
-        <option selected value=null></option>
+        <option selected value="${earlierCategory}"></option>
         <option value="Java SE">Java SE</option>
         <option value="Java EE">Java EE</option>
         <option value="Spring">Spring</option>

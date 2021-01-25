@@ -6,7 +6,7 @@
 </head>
 <body>
 <p>exportJson</p>
-<form action="/template/export" method="get">
+<form action="/export/getFile" method="get">
     <input type="submit" name="exportJson" value="save">
 </form>
 <a href="/start">Powrot</a>

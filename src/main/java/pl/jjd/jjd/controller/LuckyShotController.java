@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import pl.jjd.jjd.dto.QuestionDto;
-import pl.jjd.jjd.service.LuckyShotService;
 import pl.jjd.jjd.service.QuestionService;
 
 @Controller
@@ -18,7 +17,7 @@ public class LuckyShotController {
     }
 
     @GetMapping(path = "/luckyShot")
-    public String showLuckyShot(Model model, LuckyShotService luckyShotService) {
+    public String showLuckyShot(Model model) {
         QuestionDto question = questionService.findRandomQuestion();
         model.addAttribute("question", question.getQuestion());
         model.addAttribute("category", question.getCategory());
