@@ -1,15 +1,12 @@
 package pl.jjd.jjd.controller;
 
 
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import pl.jjd.jjd.api.FileReader;
 import pl.jjd.jjd.service.JsonReaderService;
-import pl.jjd.jjd.service.QuestionService;
 
 import java.io.IOException;
 
@@ -27,9 +24,11 @@ public class ReadJsonController {
         return "readJson";
     }
 
-    @PostMapping(path = "/json-upload")
-    public String upload(@RequestParam("file")MultipartFile file) throws IOException {
+
+    @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
+    public String submit(@RequestParam("file") MultipartFile file, ModelMap modelMap) throws IOException {
+        modelMap.addAttribute("file", file);
         jsonReaderService.read(file);
-        return "readJson";
+        return "fileUploadView";
     }
 }

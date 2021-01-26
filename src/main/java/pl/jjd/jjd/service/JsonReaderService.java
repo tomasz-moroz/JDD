@@ -30,9 +30,7 @@ public class JsonReaderService {
 
     public List<QuestionsApi>  readerFromFile(MultipartFile file) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        TypeReference<QuestionsApi> typeReference = new TypeReference<QuestionsApi>() {};
-        InputStream inputStream = TypeReference.class.getResourceAsStream(file.getName());
-        List<QuestionsApi> questionsApi = (List<QuestionsApi>) objectMapper.readValue(inputStream, typeReference);
+        List<QuestionsApi> questionsApi = objectMapper.readValue(file.getBytes(), new TypeReference<List<QuestionsApi>>(){});
         System.out.println("Questions saved");
         return questionsApi;
     }

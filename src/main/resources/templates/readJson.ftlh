@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<p>readJson</p>
-<form action="/json-upload" method="post" enctype="multipart/form-data">
-    <div >
-        <input  type="file" name="questions">
-        <button  type="submit" class=""> Upload </button>
-    </div>
-</form>
-<a href="/start">Powrot</a>
+<form method="POST" action="/uploadFile" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td><label path="file">Select a file to upload</label></td>
+            <td><input type="file" name="file" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+    </form>
 </body>
 </html>
