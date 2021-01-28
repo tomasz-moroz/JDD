@@ -19,6 +19,7 @@
         <a href="/read">Wczytaj plik JSON</a>
         <a href="/export">Zapisz pytania do pliku JSON</a>
         <a href="/viewQuestions/0?sortField=category&sortDir=desc">Przegladaj pytania</a>
+        <a href="/registration">Rejestracja</a>
       </nav>
 
     </header>

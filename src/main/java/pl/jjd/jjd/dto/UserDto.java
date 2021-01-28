@@ -31,11 +31,6 @@ public class UserDto {
     }
 
     public UserDto userToDto(User user){
-        UserDto userDto = new UserDto();
-        userDto.setFirstName(user.getFirstName());
-        userDto.setLastName(user.getLastName());
-        userDto.setEmail(user.getEmail());
-        userDto.setPassword(user.getPassword());
-        return userDto;
+        return new UserDto(user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassword());
     }
 }
