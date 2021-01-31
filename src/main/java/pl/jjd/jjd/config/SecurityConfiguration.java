@@ -1,5 +1,7 @@
 package pl.jjd.jjd.config;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -15,27 +17,25 @@ import pl.jjd.jjd.service.UserService;
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    private final UserService userService;
-
-    public SecurityConfiguration(UserService userService) {
-        this.userService = userService;
-    }
+    @Autowired
+    private UserService userService;
 
     @Bean
-    public BCryptPasswordEncoder passwordEncoder(){
+    public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+
     @Bean
-    public DaoAuthenticationProvider authenticationProvider(){
+    public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
-        auth.setUserDetailsPasswordService(userService);
+        auth.setUserDetailsService(userService);
         auth.setPasswordEncoder(passwordEncoder());
         return auth;
     }
 
     @Override
-    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authenticationProvider());
     }
 

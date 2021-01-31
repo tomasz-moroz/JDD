@@ -20,7 +20,7 @@ public class UserRegistrationController {
     }
 
     @ModelAttribute("user")
-    public UserDto userDto() {
+    public UserDto userRegistrationDto() {
         return new UserDto();
     }
 
